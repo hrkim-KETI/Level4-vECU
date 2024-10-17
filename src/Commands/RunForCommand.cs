@@ -22,7 +22,7 @@ namespace Antmicro.Renode.UserInterface.Commands
             base.PrintHelp(writer);
             writer.WriteLine();
             writer.WriteLine("Usage:");
-            writer.WriteLine($"{Name} <period> - runs emulation for the specified period (e.g., 10s, 1m, 500ms)");
+            writer.WriteLine($"{Name} <period> - runs emulation for the specified period (e.g. hour:min:sec.decimal)");
             // writer.WriteLine(String.Format("{0} @path - executes the script and starts the emulation", Name));
         }
 
@@ -54,7 +54,7 @@ namespace Antmicro.Renode.UserInterface.Commands
             try
             {
                 EmulationManager.Instance.CurrentEmulation.RunFor(parsedPeriod);
-                writer.WriteLine("Emulation completed successfully.");
+                writer.WriteLine($"Emulation completed successfully. ");
             }
             catch(Exception ex)
             {

@@ -49,6 +49,7 @@ namespace Antmicro.Renode.Peripherals.CAN
 
             legacyRxFifo = new Queue<KeyValuePair<ushort, CANMessageFrame>>();
 
+
             DefineRegisters();
         }
 
@@ -671,6 +672,20 @@ namespace Antmicro.Renode.Peripherals.CAN
             {
                 FrameSent?.Invoke(frame);
                 this.Log(LogLevel.Debug, "Transmission succeeded");
+
+                // hrkim : for fmi mode
+                lock(FMIHandler.txMessageBufferFMI)
+                {
+                    if (FMIHandler.txMessageBufferFMI.Count > 0)
+                    {
+                        FMIHandler.txMessageBufferFMI.Dequeue();
+                    }
+
+                    FMIHandler.txMessageBufferFMI.Enqueue(frame);
+                    // this.Log(LogLevel.Info, "Message added to buffer: ID {0}, DLC {1}, Data {2}",
+                    // frame.Id, frame.Data.Length, BitConverter.ToString(frame.Data));
+                    this.Log(LogLevel.Info, "Message added to buffer: {0}", frame.ToString());
+                }
             }
 
             if(!selfReceptionDisable.Value)
@@ -809,6 +824,9 @@ namespace Antmicro.Renode.Peripherals.CAN
             var messageBufferIndex = matchedItem.Index;
 
             this.Log(LogLevel.Debug, "Found matching message buffer#{0}: {1}", messageBufferIndex, messageBuffer);
+
+            this.Log(LogLevel.Info, "hrkim : CAN frame successfully received and matched. ID: {0}, Data: {1}",
+        frame.Id, BitConverter.ToString(frame.Data));
 
             messageBuffer.FillReceivedFrame(messageBuffers, messageBufferOffset, frame);
             messageBufferInterrupt[messageBufferIndex].Value = true;
@@ -1020,6 +1038,7 @@ namespace Antmicro.Renode.Peripherals.CAN
         private const int LegacyRxFifoInterruptFramesAvailable = 5;
         private const int LegacyRxFifoInterruptWarning = 6;
         private const int LegacyRxFifoInterruptOverflow = 7;
+
 
         public enum Registers
         {

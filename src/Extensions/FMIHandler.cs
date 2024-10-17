@@ -14,16 +14,24 @@ using Antmicro.Renode.Exceptions;
 using Antmicro.Renode.UserInterface;
 using Antmicro.Renode.UserInterface.Commands;  // IncludeFileCommand를 위해 추가
 using Antmicro.Renode.UserInterface.Tokenizer; // StringToken을 위해 추가
+using System.Collections.Generic;
+using Antmicro.Renode.Core.CAN;
 using AntShell.Commands;
+using System.Linq;
+using Antmicro.Renode.Logging;
 
 namespace Antmicro.Renode.Core
 {
     public class FMIHandler
     {
+        // hrkim
         private static TcpClient client;
         private static NetworkStream stream;
+        public static Queue<CANMessageFrame> txMessageBufferFMI = new Queue<CANMessageFrame>();
+        // public static Queue<CANMessageFrame> rxMessageBufferFMI = new Queue<CANMessageFrame>();
+        public static event Action<CANMessageFrame> OnCANFrameReceived;
 
-        // 서버와 연결을 시도하고 연결되면 데이터를 수신할 준비를 합니다.
+
         public static void ConnectToServer(string serverIp, int port)
         {
             try
@@ -51,9 +59,27 @@ namespace Antmicro.Renode.Core
             if (stream != null && stream.CanWrite)
             {
                 string completionMessage = "complete";
+
+                string canMessage = string.Empty;
+
+                lock(txMessageBufferFMI)
+                {
+                    if (txMessageBufferFMI.Count > 0)
+                    {
+                        var message = txMessageBufferFMI.Dequeue();
+                        var formattedMessage = $"can-{message.Id}-{message.Data.Length}-{BitConverter.ToString(message.Data).Replace("-", ":")}";
+                        canMessage += $",{formattedMessage}";
+                        completionMessage += canMessage;
+                    }
+                }
+
                 byte[] messageBuffer = Encoding.ASCII.GetBytes(completionMessage);
                 stream.Write(messageBuffer, 0, messageBuffer.Length);
-                Console.WriteLine("Sent completion message to server.");
+                Console.WriteLine($"Sent completion message to server: {completionMessage}");
+            }
+            else
+            {
+                Console.WriteLine("Stream is not available for writing.");
             }
         }
 
@@ -108,10 +134,10 @@ namespace Antmicro.Renode.Core
                     break;
 
                 case "dostep":
-                    // Expecting format like: doStep, 100ms or doStep, 1s
+                    // Expecting format like: doStep, "0.01" (10ms)
                     if (commandParts.Length > 1)
                     {
-                        var period = commandParts[1].Trim();  // "100ms", "1s"
+                        var period = commandParts[1].Trim();  
                         Console.WriteLine($"Executing runfor {period}");
                         TimeInterval parsedPeriod;
 
@@ -139,21 +165,58 @@ namespace Antmicro.Renode.Core
                     }
                     break;
 
-                // case "CAN":
-                //     if (commandParts.Length > 3)
-                //     {
-                //         var canMessageId = commandParts[1].Trim();
-                //         var dlc = commandParts[2].Trim();
-                //         var canMessageData = commandParts[3].Trim();
+                case "can":
+                    if (commandParts.Length > 2) // "can", "canmessage", "period"
+                    {
+                        var canMessage = commandParts[1].Trim(); // id-dlc-data
+                        var period = commandParts[2].Trim();
+                        TimeInterval parsedPeriod;
 
-                //         Console.WriteLine($"Processing CAN message with ID: {canMessageId}, DLC: {dlc}, Data: {canMessageData}");
-                //         ProcessCANMessage(canMessageId, canMessageData);
-                //     }
-                //     else
-                //     {
-                //         Console.WriteLine("Invalid CAN message format.");
-                //     }
-                //     break;
+                        
+                        var messageParts = canMessage.Split('-');
+                        if (messageParts.Length == 3)
+                        {
+                            var canMessageId = messageParts[0].Trim(); // ID
+                            // var dlc = messageParts[1].Trim();           // Length
+                            var canMessageData = messageParts[2].Trim();
+                            
+                            // this.Log(LogLevel.Debug, $"hrkim-Processing CAN message with ID: {canMessageId}, Data: {canMessageData}");
+                            
+                            var rxCANMessage = ProcessCANMessage(canMessageId, canMessageData);
+                            Console.WriteLine($"hrkim-rxCANMessage in can command: {rxCANMessage}");
+
+                            OnCANFrameReceived?.Invoke(rxCANMessage);
+                            
+                        }
+
+                        if (TimeInterval.TryParse(period, out parsedPeriod))
+                        {
+                            try
+                            {
+                                EmulationManager.Instance.CurrentEmulation.RunFor(parsedPeriod);
+                                // this.Log(LogLevel.Debug, $"Emulation completed successfully.");
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine($"Error during emulation: {ex.Message}");
+                                // this.Log(LogLevel.Warning, $"Error during emulation: {ex.Message}");
+
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Invalid time format: {period}");
+                            // this.Log(LogLevel.Debug, $"Invalid time format: {period}");
+
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid CAN commnad format.");
+                        // this.Log(LogLevel.Debug, "Invalid CAN commnad format.");
+
+                    }
+                    break;
 
                 default:
                     Console.WriteLine($"Unknown command: {commandType}");
@@ -161,11 +224,24 @@ namespace Antmicro.Renode.Core
             }
         }
 
-        // private static void ProcessCANMessage(string id, string data)
-        // {
-        //     Console.WriteLine($"Processing CAN message with ID: {id} and Data: {data}");
-        //     // Insert code to handle CAN message within the simulation
-        // }
+        private static CANMessageFrame ProcessCANMessage(string id, string data)
+        {
+            try
+            {
+                var messageID = Convert.ToUInt32(id, 16);   // ID conversion with hex
+                // var dataLength = Convert.ToByte(dlc);       // DLC conversion with byte
+                var dataBytes = data.Split(':').Select(b => Convert.ToByte(b, 16)).ToArray();
+
+                var canMessageFrame = new CANMessageFrame(messageID, dataBytes);
+                return canMessageFrame;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error processing CAN message: {ex.Message}");
+                return null;
+            }
+        }
 
         // Method to parse and include resc file without Monitor shell interaction
         private static void IncludeRescFile(string rescFilePath, Antmicro.Renode.UserInterface.Monitor monitor)
@@ -174,19 +250,20 @@ namespace Antmicro.Renode.Core
             try
             {
                 // 실제 include 명령을 처리
-                var token = new StringToken(rescFilePath);
+                // var token = new StringToken(rescFilePath);
 
                 Console.WriteLine($"Attempting to include resc file: {rescFilePath}");
-                var result = monitor.Parse(rescFilePath);
+                // var result = monitor.Parse(rescFilePath);
+                monitor.Parse(rescFilePath);
 
-                if (result)
-                {
-                    Console.WriteLine($"Successfully included resc file: {rescFilePath}");
-                }
-                else
-                {
-                    Console.WriteLine($"Failed to include resc file: {rescFilePath}");
-                }
+                // if (result)
+                // {
+                    // Console.WriteLine($"Successfully included resc file: {rescFilePath}");
+                // }
+                // else
+                // {
+                    // Console.WriteLine($"Failed to include resc file: {rescFilePath}");
+                // }
             }
             catch (Exception ex)
             {

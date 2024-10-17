@@ -25,5 +25,8 @@ cp -a ./src/Commands/RunForCommand.cs ${RENODE_HOME}/src/Infrastructure/src/Emul
 # Copy all files from UI
 cp -a ./src/UI/. ${RENODE_HOME}/src/Infrastructure/src/UI/
 
-# Copy all files from Extensions
-cp -a ./src/Extensions/. ${RENODE_HOME}/src/Infrastructure/src/Emulator/Extensions/
+# Copy all files from Extensions to Tools
+cp -a ./src/Extensions/. ${RENODE_HOME}/src/Infrastructure/src/Emulator/Extensions/Tools/
+
+# Copy all files from Tools
+cp -a ./src/Network/. ${RENODE_HOME}/src/Infrastructure/src/Emulator/Extensions/Tools/Network/
