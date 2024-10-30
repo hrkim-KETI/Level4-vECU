@@ -1,0 +1,7 @@
+#ifndef vECUwrapperModel_types_h_
+#define vECUwrapperModel_types_h_
+
+typedef struct P_vECUwrapperModel_T_ P_vECUwrapperModel_T;
+typedef struct tag_RTM_vECUwrapperModel_T RT_MODEL_vECUwrapperModel_T;
+
+#endif

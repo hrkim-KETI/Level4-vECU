@@ -4,8 +4,8 @@
 # Copy all files from Timers
 cp -a ./src/Timers/. ${RENODE_HOME}/src/Infrastructure/src/Emulator/Peripherals/Peripherals/Timers/
 
-# Copy all files from Timers
-cp -a ./src/Time/. ${RENODE_HOME}/src/Infrastructure/src/Emulator/Main/Time/
+# Copy all files from Time
+#cp -a ./src/Time/. ${RENODE_HOME}/src/Infrastructure/src/Emulator/Main/Time/
 
 # Copy all files from Miscellaneous
 cp -a ./src/Miscellaneous/. ${RENODE_HOME}/src/Infrastructure/src/Emulator/Peripherals/Peripherals/Miscellaneous/
@@ -17,7 +17,7 @@ cp -a ./src/Analog/. ${RENODE_HOME}/src/Infrastructure/src/Emulator/Peripherals/
 cp -a ./src/CAN/S32K1XX_FlexCAN* ${RENODE_HOME}/src/Infrastructure/src/Emulator/Peripherals/Peripherals/CAN/S32K1XX_FlexCAN/
 
 # Copy all files from CAN2
-cp -a ./src/CAN/S32K3XX_FlexCAN* ${RENODE_HOME}/src/Infrastructure/src/Emulator/Peripherals/Peripherals/CAN/S32K3XX_FlexCAN/
+#cp -a ./src/CAN/S32K3XX_FlexCAN* ${RENODE_HOME}/src/Infrastructure/src/Emulator/Peripherals/Peripherals/CAN/S32K3XX_FlexCAN/
 
 # Copy all files from Commands
 cp -a ./src/Commands/RunForCommand.cs ${RENODE_HOME}/src/Infrastructure/src/Emulator/Extensions/UserInterface/Commands/

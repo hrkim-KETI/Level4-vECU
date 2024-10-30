@@ -106,9 +106,11 @@ namespace Antmicro.Renode.UI
                 };
 
                 // hrkim add
-                if (options.FMI)
+                if (options.FMIPort > 0 && options.FMIPort <= 65535)
                 {
-                    FMIHandler.ConnectToServer("localhost", 7789); // 서버 IP와 포트를 입력하세요
+                    int portNumber = options.FMIPort;
+                    int cnt = 0; // hrkim : for test
+                    FMIHandler.ConnectToServer("localhost", portNumber); // 서버 IP와 포트를 입력하세요
                     monitor.Interaction = new DummyCommandInteraction();
 
                     var communicationThread = new System.Threading.Thread(new ThreadStart(() =>
@@ -125,14 +127,30 @@ namespace Antmicro.Renode.UI
                                 
                                 if(command != null)
                                 {
-                                    FMIHandler.HandleCommand(command, monitor);
+                                    FMIHandler.HandleCommand(command, monitor, options.rescPath);
                                     FMIHandler.SendCompletionMessageToServer();
                                 }
+
+                                if(command == "quit")
+                                {
+                                    Console.WriteLine("In the quit condition");
+                                    break;
+                                }
+                                
+                                else if(command == "init")
+                                    continue;
+
+                                else
+                                {
+                                    Console.WriteLine($"step : {cnt++}, command : {command}");
+                                    // cnt++;
+                                }  
 
                             }
                         }
                         finally
                         {
+                            // Console.WriteLine($"counter in vECU : {cnt}");
                             FMIHandler.DisconnectFromServer();
                         }
                     }));
@@ -142,63 +160,64 @@ namespace Antmicro.Renode.UI
                     // Exit 처리 추가
                     Emulator.BeforeExit += () =>
                     {
-                        FMIHandler.DisconnectFromServer();
                         Emulator.DisposeAll();
                         xwt?.Dispose();
                         xwt = null;
+                        // Console.WriteLine($"hrkim BeforeExit test");
+
                     };
                 }
                 else
                 {
-                var shell = PrepareShell(options, monitor);
-                new System.Threading.Thread(x => shell.Start(true))
-                {
-                    IsBackground = true,
-                    Name = "Shell thread"
-                }.Start();
-            
-
-                Emulator.BeforeExit += () =>
-                {
-                    Emulator.DisposeAll();
-                    xwt?.Dispose();
-                    xwt = null;
-                };
-
-                if(beforeRun != null)
-                {
-                    beforeRun(context);
-                }
-
-                if(options.RobotDebug)
-                {
-                    ConsoleWindowBackendAnalyzer terminal = null;
-
-                    Emulator.EnableGUI += () =>
+                    var shell = PrepareShell(options, monitor);
+                    new System.Threading.Thread(x => shell.Start(true))
                     {
-                        Logger.AddBackend(ConsoleBackend.Instance, "console", true);
-                        terminal = new ConsoleWindowBackendAnalyzer(true);
-                        terminal.Show();
-                        shell.Terminal = new NavigableTerminalEmulator(terminal.IO);
-                        shell.Terminal.PlainMode = options.Plain;
+                        IsBackground = true,
+                        Name = "Shell thread"
+                    }.Start();
+                
 
-                        new System.Threading.Thread(x => shell.Start(true))
-                        {
-                            IsBackground = true,
-                            Name = "Shell thread"
-                        }.Start();
+                    Emulator.BeforeExit += () =>
+                    {
+                        Emulator.DisposeAll();
+                        xwt?.Dispose();
+                        xwt = null;
                     };
 
-                    Emulator.DisableGUI += () =>
+                    if(beforeRun != null)
                     {
-                        if(options.HideLog)
+                        beforeRun(context);
+                    }
+
+                    if(options.RobotDebug)
+                    {
+                        ConsoleWindowBackendAnalyzer terminal = null;
+
+                        Emulator.EnableGUI += () =>
                         {
-                            Logger.RemoveBackend(ConsoleBackend.Instance);
-                        }
-                        terminal?.Hide();
-                        terminal = null;
-                    };
-                }
+                            Logger.AddBackend(ConsoleBackend.Instance, "console", true);
+                            terminal = new ConsoleWindowBackendAnalyzer(true);
+                            terminal.Show();
+                            shell.Terminal = new NavigableTerminalEmulator(terminal.IO);
+                            shell.Terminal.PlainMode = options.Plain;
+
+                            new System.Threading.Thread(x => shell.Start(true))
+                            {
+                                IsBackground = true,
+                                Name = "Shell thread"
+                            }.Start();
+                        };
+
+                        Emulator.DisableGUI += () =>
+                        {
+                            if(options.HideLog)
+                            {
+                                Logger.RemoveBackend(ConsoleBackend.Instance);
+                            }
+                            terminal?.Hide();
+                            terminal = null;
+                        };
+                    }
                 }
 
                 Emulator.WaitForExit();

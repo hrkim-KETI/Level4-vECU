@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BlockMod>
+	<!--Blocks-->
+	<Blocks>
+		<Block name="vECUcontroller">
+			<Position>48, 160</Position>
+			<Size>128, 192</Size>
+			<!--Sockets-->
+			<Sockets>
+				<Socket name="In1">
+					<Position>0, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="Out1">
+					<Position>128, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>false</Inlet>
+				</Socket>
+			</Sockets>
+		</Block>
+		<Block name="canBusModel">
+			<Position>400, 160</Position>
+			<Size>128, 192</Size>
+			<!--Sockets-->
+			<Sockets>
+				<Socket name="CAN_IN_1">
+					<Position>0, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_2">
+					<Position>0, 32</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_3">
+					<Position>0, 48</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_4">
+					<Position>0, 64</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_OUT">
+					<Position>128, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>false</Inlet>
+				</Socket>
+			</Sockets>
+		</Block>
+	</Blocks>
+	<!--Connectors-->
+	<Connectors>
+		<Connector name="new connector">
+			<Source>vECUcontroller.Out1</Source>
+			<Target>canBusModel.CAN_IN_1</Target>
+			<!--Connector segments (between start and end lines)-->
+			<Segments>
+				<Segment>
+					<Orientation>Horizontal</Orientation>
+					<Offset>160</Offset>
+				</Segment>
+			</Segments>
+		</Connector>
+		<Connector name="new connector">
+			<Source>canBusModel.CAN_OUT</Source>
+			<Target>vECUcontroller.In1</Target>
+			<!--Connector segments (between start and end lines)-->
+			<Segments>
+				<Segment>
+					<Orientation>Vertical</Orientation>
+					<Offset>-144</Offset>
+				</Segment>
+				<Segment>
+					<Orientation>Horizontal</Orientation>
+					<Offset>-544</Offset>
+				</Segment>
+				<Segment>
+					<Orientation>Vertical</Orientation>
+					<Offset>144</Offset>
+				</Segment>
+			</Segments>
+		</Connector>
+	</Connectors>
+</BlockMod>

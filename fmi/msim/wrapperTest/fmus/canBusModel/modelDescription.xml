@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<fmiModelDescription fmiVersion="2.0" generationDateAndTime="2024-10-26T07:48:33Z" generationTool="Simulink (R2024b)" guid="{972d16a0-be2a-0480-896d-976e8f6630c5}" modelName="canBusModel" numberOfEventIndicators="0" variableNamingConvention="structured" version="4.1">
+  <CoSimulation canBeInstantiatedOnlyOncePerProcess="true" canGetAndSetFMUstate="true" canHandleVariableCommunicationStepSize="false" canNotUseMemoryManagementFunctions="true" canSerializeFMUstate="true" modelIdentifier="canBusModel">
+    <SourceFiles>
+      <File name="canBusModel.c"/>
+      <File name="canBusModel_data.c"/>
+      <File name="canBus.c"/>
+      <File name="RTWCG_FMU_util.c"/>
+      <File name="canBusModel_fmu.c"/>
+    </SourceFiles>
+  </CoSimulation>
+  <DefaultExperiment startTime="0" stepSize="1e-05" stopTime="2"/>
+  <VendorAnnotations>
+    <Tool name="Simulink">
+      <Simulink>
+        <ImportCompatibility FMUProduct="standalone FMU" requireMATLABOnPath="no" requireRelease="all"/>
+        <SimulinkModelInterface>
+          <Inport blockPath="canBusModel/CAN_IN_1" dataType="string" dimension="[1]" portName="CAN_IN_1" portNumber="1" sampleTime="[1e-05     0]" uniquePortName="CAN_IN_1" unit=""/>
+          <Inport blockPath="canBusModel/CAN_IN_2" dataType="string" dimension="[1]" portName="CAN_IN_2" portNumber="2" sampleTime="[1e-05     0]" uniquePortName="CAN_IN_2" unit=""/>
+          <Inport blockPath="canBusModel/CAN_IN_3" dataType="string" dimension="[1]" portName="CAN_IN_3" portNumber="3" sampleTime="[1e-05     0]" uniquePortName="CAN_IN_3" unit=""/>
+          <Inport blockPath="canBusModel/CAN_IN_4" dataType="string" dimension="[1]" portName="CAN_IN_4" portNumber="4" sampleTime="[1e-05     0]" uniquePortName="CAN_IN_4" unit=""/>
+          <Outport blockPath="canBusModel/CAN_OUT" dataType="string" dimension="[1]" portName="CAN_OUT" portNumber="1" sampleTime="[1e-05     0]" uniquePortName="CAN_OUT" unit=""/>
+        </SimulinkModelInterface>
+      </Simulink>
+    </Tool>
+  </VendorAnnotations>
+  <ModelVariables>
+    <ScalarVariable causality="input" description="CAN_IN_1" name="CAN_IN_1" valueReference="0" variability="discrete">
+      <String start="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+      <!--Index = 1-->
+    </ScalarVariable>
+    <ScalarVariable causality="input" description="CAN_IN_2" name="CAN_IN_2" valueReference="1" variability="discrete">
+      <String start="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+      <!--Index = 2-->
+    </ScalarVariable>
+    <ScalarVariable causality="input" description="CAN_IN_3" name="CAN_IN_3" valueReference="2" variability="discrete">
+      <String start="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+      <!--Index = 3-->
+    </ScalarVariable>
+    <ScalarVariable causality="input" description="CAN_IN_4" name="CAN_IN_4" valueReference="3" variability="discrete">
+      <String start="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+      <!--Index = 4-->
+    </ScalarVariable>
+    <ScalarVariable causality="output" description="CAN_OUT" initial="calculated" name="CAN_OUT" valueReference="4" variability="discrete">
+      <String/>
+      <!--Index = 5-->
+    </ScalarVariable>
+    <ScalarVariable causality="independent" description="time" name="time" valueReference="0" variability="continuous">
+      <Real/>
+      <!--Index = 6-->
+    </ScalarVariable>
+    <ScalarVariable causality="parameter" description="CanFDSpeed_bps" initial="exact" name="CanFDSpeed_bps" valueReference="0" variability="tunable">
+      <Integer start="5000000"/>
+      <!--Index = 7-->
+    </ScalarVariable>
+    <ScalarVariable causality="parameter" description="CanSpeed_bps" initial="exact" name="CanSpeed_bps" valueReference="1" variability="tunable">
+      <Integer start="500000"/>
+      <!--Index = 8-->
+    </ScalarVariable>
+    <ScalarVariable causality="parameter" description="FixedStep_us" initial="exact" name="FixedStep_us" valueReference="2" variability="tunable">
+      <Integer start="10"/>
+      <!--Index = 9-->
+    </ScalarVariable>
+  </ModelVariables>
+  <ModelStructure>
+    <Outputs>
+      <Unknown index="5"/>
+    </Outputs>
+    <InitialUnknowns>
+      <Unknown index="5"/>
+    </InitialUnknowns>
+  </ModelStructure>
+</fmiModelDescription>

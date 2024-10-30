@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<fmiBuildDescription fmiVersion="2.0">
+  <BuildConfiguration description="Build configuration for desktop platforms" modelIdentifier="vECUwrapperModel">
+    <SourceFileSet language="C99">
+      <SourceFile name="vECUwrapperModel.c"/>
+      <SourceFile name="vECUwrapperModel_data.c"/>
+      <SourceFile name="vECUwrapper.c"/>
+      <SourceFile name="RTWCG_FMU_util.c"/>
+      <SourceFile name="vECUwrapperModel_fmu.c"/>
+    </SourceFileSet>
+  </BuildConfiguration>
+</fmiBuildDescription>

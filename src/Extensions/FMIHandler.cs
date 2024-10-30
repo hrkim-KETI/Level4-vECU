@@ -67,7 +67,7 @@ namespace Antmicro.Renode.Core
                     if (txMessageBufferFMI.Count > 0)
                     {
                         var message = txMessageBufferFMI.Dequeue();
-                        var formattedMessage = $"can-{message.Id}-{message.Data.Length}-{BitConverter.ToString(message.Data).Replace("-", ":")}";
+                        var formattedMessage = $"can,1-{message.Id.ToString()}-0-{message.Data.Length.ToString()}-{BitConverter.ToString(message.Data).Replace("-", ":")}";
                         canMessage += $",{formattedMessage}";
                         completionMessage += canMessage;
                     }
@@ -104,7 +104,7 @@ namespace Antmicro.Renode.Core
             return null;
         }
         // HandleCommand processes the received command and executes appropriate actions.
-        public static void HandleCommand(string command, Antmicro.Renode.UserInterface.Monitor monitor)
+        public static void HandleCommand(string command, Antmicro.Renode.UserInterface.Monitor monitor, string rescPath)
         {
             if (string.IsNullOrEmpty(command))
             {
@@ -120,12 +120,13 @@ namespace Antmicro.Renode.Core
             switch (commandType)
             {
                 case "init":
-                    if (commandParts.Length > 1)
+                    if (!string.IsNullOrEmpty(rescPath))
                     {
-                        var rescFilePath = commandParts[1].Trim(); // Second part is the resc file path
-                        var includeCommand = $"include @{rescFilePath}";
-                        Console.WriteLine($"Initializing simulation with resc file: {rescFilePath}");
+                        // var rescFilePath = commandParts[1].Trim(); // Second part is the rescPath file path
+                        var includeCommand = $"include @{rescPath}";
                         IncludeRescFile(includeCommand, monitor);
+                        Console.WriteLine($"Initializing simulation with resc file: {rescPath}");
+                        monitor.Parse("currentTime");
                     }
                     else
                     {
@@ -138,7 +139,7 @@ namespace Antmicro.Renode.Core
                     if (commandParts.Length > 1)
                     {
                         var period = commandParts[1].Trim();  
-                        Console.WriteLine($"Executing runfor {period}");
+                        // Console.WriteLine($"Executing runfor {period}");
                         TimeInterval parsedPeriod;
 
                         // Parsing to TimeInterval and Execute RunFor
@@ -147,7 +148,9 @@ namespace Antmicro.Renode.Core
                             try
                             {
                                 EmulationManager.Instance.CurrentEmulation.RunFor(parsedPeriod);
-                                Console.WriteLine("Emulation completed successfully.");
+                                Console.WriteLine("dostep completed successfully.");
+                                monitor.Parse("currentTime");
+
                             }
                             catch (Exception ex)
                             {
@@ -168,17 +171,19 @@ namespace Antmicro.Renode.Core
                 case "can":
                     if (commandParts.Length > 2) // "can", "canmessage", "period"
                     {
-                        var canMessage = commandParts[1].Trim(); // id-dlc-data
+                        var canMessage = commandParts[1].Trim(); // sof-id-fd-dlc-data
                         var period = commandParts[2].Trim();
                         TimeInterval parsedPeriod;
 
                         
                         var messageParts = canMessage.Split('-');
-                        if (messageParts.Length == 3)
+                        if (messageParts.Length == 5)
                         {
-                            var canMessageId = messageParts[0].Trim(); // ID
-                            // var dlc = messageParts[1].Trim();           // Length
-                            var canMessageData = messageParts[2].Trim();
+                            // var dlc = messageParts[0].Trim();           // sof
+                            var canMessageId = messageParts[1].Trim();     // id
+                            // var dlc = messageParts[2].Trim();           // fd
+                            // var dlc = messageParts[3].Trim();           // dlc
+                            var canMessageData = messageParts[4].Trim();
                             
                             // this.Log(LogLevel.Debug, $"hrkim-Processing CAN message with ID: {canMessageId}, Data: {canMessageData}");
                             
@@ -194,7 +199,9 @@ namespace Antmicro.Renode.Core
                             try
                             {
                                 EmulationManager.Instance.CurrentEmulation.RunFor(parsedPeriod);
-                                // this.Log(LogLevel.Debug, $"Emulation completed successfully.");
+                                // hrkim : for test
+                                monitor.Parse("currentTime");
+                                Console.WriteLine("can completed successfully.");
                             }
                             catch (Exception ex)
                             {
@@ -218,17 +225,31 @@ namespace Antmicro.Renode.Core
                     }
                     break;
 
+                case "quit":
+                    try
+                    {
+                        monitor.Parse("currentTime");
+                        // EmulationManager.Instance.CurrentEmulation.Dispose();
+                        Console.WriteLine("Emulation is quitted successfully.");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error during quit: {ex.Message}");
+                    }
+                    break;
+
                 default:
                     Console.WriteLine($"Unknown command: {commandType}");
                     break;
             }
         }
 
+        // hrkim : convert array with ':' to data bytes
         private static CANMessageFrame ProcessCANMessage(string id, string data)
         {
             try
             {
-                var messageID = Convert.ToUInt32(id, 16);   // ID conversion with hex
+                var messageID = Convert.ToUInt32(id, 10);   // ID conversion with hex
                 // var dataLength = Convert.ToByte(dlc);       // DLC conversion with byte
                 var dataBytes = data.Split(':').Select(b => Convert.ToByte(b, 16)).ToArray();
 
@@ -246,24 +267,10 @@ namespace Antmicro.Renode.Core
         // Method to parse and include resc file without Monitor shell interaction
         private static void IncludeRescFile(string rescFilePath, Antmicro.Renode.UserInterface.Monitor monitor)
         {
-            Console.WriteLine($"rescFile : {rescFilePath}");
+            // Console.WriteLine($"rescFile : {rescFilePath}");
             try
             {
-                // 실제 include 명령을 처리
-                // var token = new StringToken(rescFilePath);
-
-                Console.WriteLine($"Attempting to include resc file: {rescFilePath}");
-                // var result = monitor.Parse(rescFilePath);
                 monitor.Parse(rescFilePath);
-
-                // if (result)
-                // {
-                    // Console.WriteLine($"Successfully included resc file: {rescFilePath}");
-                // }
-                // else
-                // {
-                    // Console.WriteLine($"Failed to include resc file: {rescFilePath}");
-                // }
             }
             catch (Exception ex)
             {
