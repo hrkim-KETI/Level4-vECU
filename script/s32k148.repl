@@ -42,20 +42,21 @@ dwt: Miscellaneous.DWT @ sysbus 0xE0001000
     //IRQ -> nvic@33
 
 
-//can0_mcr: Python.PythonPeripheral @ sysbus 0x40024000
+//can1_mcr: Python.PythonPeripheral @ sysbus 0x40024000
     //size: 0x4
     //initable: true
     //filename: "scripts/pydev/flipflop.py"
 
-can0: CAN.S32K1XX_FlexCAN @ sysbus 0x40024000
+can1: CAN.S32K1XX_FlexCAN @ sysbus 0x40024000
     numberOfMessageBuffers: 32
     IRQ0 -> nvic@81
     IRQ1 -> nvic@82
 
-//lpit: Timers.S32K_LPIT @ sysbus 0x40037000
-    //frequency: 8000000
-//    frequency: 32000000
-    //IRQ -> nvic@50
+lpit: Timers.S32K148_LPIT @ sysbus 0x40037000
+    frequency: 80000000
+   //frequency: 32000000
+   // IRQ0 -> nvic@50
+    IRQ1 -> nvic@48
 
 ftm: Timers.S32K148_FTM @ sysbus 0x40038000
     frequency: 80000000
@@ -106,14 +107,18 @@ portD: GPIOPort.NXPGPIOPort @ {
 portE: GPIOPort.NXPGPIOPort @ {
     sysbus new Bus.BusMultiRegistration { address: 0x400FF100; size: 0x40; region: "gpio" };
     sysbus new Bus.BusMultiRegistration { address: 0x4004D000; size: 0xD0; region: "port" }}
-    numberOfPins: 17
+    numberOfPins: 23
     -> portGPIO@4
     14 -> led0@0
     13 -> led1@0
     12 -> led2@0
     11 -> led3@0
+    22 -> led4@0
 
 //dmatcd : Miscellaneous.S32K148_DMATCD @ sysbus 0x40009000
+
+button1 : Miscellaneous.Button @ portC 12
+    -> portC@12
 
 scg: Miscellaneous.S32K148_SCG @ sysbus 0x40064000
 
@@ -121,6 +126,7 @@ led0: Miscellaneous.LED @ portE 14
 led1: Miscellaneous.LED @ portE 13
 led2: Miscellaneous.LED @ portE 12
 led3: Miscellaneous.LED @ portE 11
+led4: Miscellaneous.LED @ portE 22
 
 
 //ftfc: Miscellaneous.S32K148_FTFC @ sysbus 0x40020000
@@ -134,7 +140,7 @@ led3: Miscellaneous.LED @ portE 11
 //sysbus:
     //init:
         //ApplySVD @hrkim/script/S32K148.svd
-//        Tag <0x40024000, 0x40024003> "CAN0:MCR" 0x0
+//        Tag <0x40024000, 0x40024003> "CAN1:MCR" 0x0
 //        Tag <0x40038000, 0x40038003> "FTM0:SC" 0x1
 //        Tag <0x400650DC, 0x400650DF> "PPC:PPC_LPIT" 0xF9FFFFFF
 //        Tag <0x400651A8, 0x400651AB> "PPC:PPC_LPUART0" 0xF9FFFFFF
