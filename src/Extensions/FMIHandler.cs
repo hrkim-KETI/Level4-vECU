@@ -175,7 +175,9 @@ namespace Antmicro.Renode.Core
                         var period = commandParts[2].Trim();
                         TimeInterval parsedPeriod;
 
-                        can
+                        
+                        var messageParts = canMessage.Split('-');
+                        if (messageParts.Length == 5)
                         {
                             // var dlc = messageParts[0].Trim();           // sof
                             var canMessageId = messageParts[1].Trim();     // id
