@@ -1,0 +1,51 @@
+logFile $ORIGIN/../../../log/s32k148_AUTOSAR-renode_ECU3.log True
+using sysbus
+$name?="s32k148_AUTOSAR"
+mach create $name
+
+machine LoadPlatformDescription $ORIGIN/../s32k148.repl
+
+#sysbus LogAllPeripheralsAccess true
+#sysbus LogPeripheralAccess sysbus.adc0
+#cpu LogFunctionNames true "ADC"
+#cpu LogFunctionNames true 
+
+#logLevel -1 # noisy
+#logLevel 0 # debug
+#logLevel 1 # 
+#logLevel 2 # warning
+logLevel 3 # error
+
+#cpu LogFunctionNames true "TASK_OsTask_ASW_FG1_10ms"
+cpu LogFunctionNames true "CanSend"
+#cpu LogFunctionNames true "CanReceive"
+
+ 
+
+macro reset
+"""
+    sysbus LoadELF $ORIGIN/../../../elf/S32K_HSP_2019_BASE_R190716_hrkim_renodeSim_exp1_ECU3.elf     # CAN with fmi simulation mode
+    cpu VectorTableOffset `sysbus GetSymbolAddress "Os_ExceptionVectorTable"`
+#    cpu EnableProfilerCollapsedStack $ORIGIN/s32k148_AUTOSAR-profile true
+
+"""
+
+runMacro $reset
+
+#machine StartGdbServer 3344
+
+# Create Internal CAN hub for routing frames
+ #emulation CreateCANHub name="canhub" useNetworkByteOrderForLogging=false
+ emulation CreateFMICANReceiver name="fmicanreceiver" useNetworkByteOrderForLogging=false
+
+# Connect CAN controller to the CAN hub
+ #connector Connect can0 canhub
+ connector Connect can0 fmicanreceiver
+
+# Create CAN bridge to host, by default it will be named 'can0'
+ #machine CreateSocketCANBridge "socketcan"
+
+# Connect bridge to the internal network
+ #connector Connect socketcan canhub
+
+machine Start

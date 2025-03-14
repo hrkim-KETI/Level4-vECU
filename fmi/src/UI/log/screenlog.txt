@@ -1,0 +1,40 @@
+2024-11-11 10:56:45	[Progress]	[MasterSim::writeVersionInfo]           	MasterSimulator, version 0.9.7
+2024-11-11 10:56:45	[Progress]	[MasterSim::writeVersionInfo]           	Copyright by Andreas Nicolai, released under GPL license (see LICENSE file).
+2024-11-11 10:56:45	[Progress]	[MasterSim::writeVersionInfo]           	
+2024-11-11 10:56:45	[Progress]	[main]                                  	Reading project 'UI'
+2024-11-11 10:56:45	[Progress]	[MasterSimulator::importFMUs]           	
+2024-11-11 10:56:45	[Progress]	[MasterSimulator::importFMUs]           	Importing FMUs
+2024-11-11 10:56:45	[Progress]	[MasterSimulator::checkCapabilities]    	
+2024-11-11 10:56:45	[Progress]	[MasterSimulator::checkCapabilities]    	Checking capabilities of FMUs
+2024-11-11 10:56:45	[Progress]	[MasterSimulator::checkCapabilities]    	  Iteration disabled (maximum number of iterations == 1).
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialize]                 	Collecting value references for output quantities
+2024-11-11 10:56:45	[Progress]	[MasterSimulator::instatiateSlaves]     	
+2024-11-11 10:56:45	[Progress]	[MasterSimulator::instatiateSlaves]     	Instantiating simulation slaves
+2024-11-11 10:56:45	[Progress]	[MasterSimulator::instatiateSlaves]     	
+2024-11-11 10:56:45	[Progress]	[MasterSimulator::instatiateSlaves]     	Cycles
+2024-11-11 10:56:45	[Progress]	[MasterSim::composeVariableVector]      	
+2024-11-11 10:56:45	[Progress]	[MasterSim::composeVariableVector]      	Resolving connection graph and building variable mapping
+2024-11-11 10:56:45	[Warning ]	[MasterSim::composeVariableVector]      	  No real variables in connection graph. This may be an error since FMUs won't communicate with each other.
+2024-11-11 10:56:45	[Progress]	[MasterSim::setupDefaultParameters]     	
+2024-11-11 10:56:45	[Progress]	[MasterSim::setupDefaultParameters]     	Setting up default parameters
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	Setting up experiment (calling initializeSlave()/setupExperiment() in slaves)
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	Initial conditions (parameters, input values, initial condition iteration)
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	  Setting default start values for input variables/parameters
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	  Setting user-defined parameters and start values for input variables.
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	  Entering initialization mode (calling enterInitializationMode() in FMI 2 slaves)
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	  Initial condition iteration (Gauss-Jacobi-Iteration only with get/set functions)
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	  Gauss-Jacobi-Iteration, loop #1.
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	  Gauss-Jacobi-Iteration, loop #2.
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	  Gauss-Jacobi-Iteration, loop #3.
+2024-11-11 10:56:45	[Progress]	[MasterSim::initialConditions]          	  Leaving initialization mode (calling exitInitializationMode() in FMI 2 slaves)
+2024-11-11 10:56:45	[Progress]	[OutputWriter::openOutputFile]          	Skipping output file 'strings.csv', no outputs of this type are generated.
+2024-11-11 10:56:45	[Warning ]	[OutputWriter::openOutputFile]          	No output quantities defined in slaves, MasterSim will not generate any results!
+2024-11-11 10:56:45	[Progress]	[OutputWriter::openOutputFile]          	Creating output file 'values.csv'.
+2024-11-11 10:56:45	[Progress]	[SolverFeedback::writeFeedback]         	Simtime     Simdate           Realtime    MeanSpeed    CurrentSpeed ETC
+2024-11-11 10:56:45	[Progress]	[SolverFeedback::writeFeedback]         	 0.000 s    01.01.00  0:00:00  0.000 s     0.000 s/s    0.000 s/s   ---
+2024-11-11 10:56:46	[Progress]	[SolverFeedback::writeFeedback]         	166.403 d   16.06.00  9:40:00  0.500 s    332.718 d/s  332.798 d/s   0.597 s
+2024-11-11 10:56:46	[Progress]	[SolverFeedback::writeFeedback]         	UI
+2024-11-11 10:56:46	[Progress]	[SolverFeedback::writeFeedback]         	252.639 d   10.09.00 15:20:00  1.000 s    252.600 d/s  252.631 d/s   0.445 s
+2024-11-11 10:56:47	[Progress]	[SolverFeedback::writeFeedback]         	320.049 d   17.11.00  1:10:00  1.500 s    213.340 d/s  213.357 d/s   0.211 s

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BlockMod>
+	<!--Blocks-->
+	<Blocks>
+		<Block name="canBusModel">
+			<Position>32, 640</Position>
+			<Size>128, 192</Size>
+			<!--Sockets-->
+			<Sockets>
+				<Socket name="CAN_IN_1">
+					<Position>0, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_2">
+					<Position>0, 32</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_3">
+					<Position>0, 48</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_4">
+					<Position>0, 64</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_5">
+					<Position>0, 80</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_6">
+					<Position>0, 96</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_7">
+					<Position>0, 112</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_8">
+					<Position>0, 128</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_OUT">
+					<Position>128, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>false</Inlet>
+				</Socket>
+			</Sockets>
+		</Block>
+		<Block name="vECUcontroller_3">
+			<Position>-352, 640</Position>
+			<Size>128, 192</Size>
+			<!--Sockets-->
+			<Sockets>
+				<Socket name="In1">
+					<Position>0, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="Out1">
+					<Position>128, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>false</Inlet>
+				</Socket>
+			</Sockets>
+		</Block>
+		<Block name="vECUcontroller_4">
+			<Position>-352, 912</Position>
+			<Size>128, 192</Size>
+			<!--Sockets-->
+			<Sockets>
+				<Socket name="In1">
+					<Position>0, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="Out1">
+					<Position>128, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>false</Inlet>
+				</Socket>
+			</Sockets>
+		</Block>
+	</Blocks>
+	<!--Connectors-->
+	<Connectors>
+		<Connector name="new connector">
+			<Source>vECUcontroller_3.Out1</Source>
+			<Target>canBusModel.CAN_IN_1</Target>
+			<!--Connector segments (between start and end lines)-->
+			<Segments>
+				<Segment>
+					<Orientation>Horizontal</Orientation>
+					<Offset>192</Offset>
+				</Segment>
+			</Segments>
+		</Connector>
+		<Connector name="new connector">
+			<Source>vECUcontroller_4.Out1</Source>
+			<Target>canBusModel.CAN_IN_2</Target>
+			<!--Connector segments (between start and end lines)-->
+			<Segments>
+				<Segment>
+					<Orientation>Vertical</Orientation>
+					<Offset>-256</Offset>
+				</Segment>
+				<Segment>
+					<Orientation>Horizontal</Orientation>
+					<Offset>192</Offset>
+				</Segment>
+			</Segments>
+		</Connector>
+		<Connector name="new connector">
+			<Source>canBusModel.CAN_OUT</Source>
+			<Target>vECUcontroller_3.In1</Target>
+			<!--Connector segments (between start and end lines)-->
+			<Segments>
+				<Segment>
+					<Orientation>Horizontal</Orientation>
+					<Offset>-576</Offset>
+				</Segment>
+			</Segments>
+		</Connector>
+		<Connector name="new connector">
+			<Source>canBusModel.CAN_OUT</Source>
+			<Target>vECUcontroller_4.In1</Target>
+			<!--Connector segments (between start and end lines)-->
+			<Segments>
+				<Segment>
+					<Orientation>Vertical</Orientation>
+					<Offset>272</Offset>
+				</Segment>
+				<Segment>
+					<Orientation>Horizontal</Orientation>
+					<Offset>-576</Offset>
+				</Segment>
+			</Segments>
+		</Connector>
+	</Connectors>
+</BlockMod>

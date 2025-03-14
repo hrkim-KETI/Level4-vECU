@@ -12,13 +12,13 @@
 
 int server_fd, new_socket;
 
-int initSocket(int portNumber)
+int initSocket(int portNumber, int fmuNum)
 {
     // static int isInitialized = 0;
     ssize_t sent_bytes, read_bytes;
     int r = 0;
     // unsigned char init_command[BUFFER_SIZE] = {0};
-    unsigned char *init_command = "init";
+    // unsigned char *init_command = "init";
     
     // if (isInitialized == 1)
     // {
@@ -32,7 +32,7 @@ int initSocket(int portNumber)
     // // 1. Create Socket
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
     {
-        printf("socket failed");
+        printf("socket failed in FMU(%d)\n", fmuNum);
         r = 1;
     }
 
@@ -44,7 +44,7 @@ int initSocket(int portNumber)
     // // 3. Bind address to socket
     if (bind(server_fd, (struct sockaddr *)&address, sizeof(address)) < 0)
     {
-        printf("bind failed");
+        printf("bind failed in FMU(%d)\n", fmuNum);
         close(server_fd);
         r = 2;
     }
@@ -52,7 +52,7 @@ int initSocket(int portNumber)
     // // 4. Listen (Wait connection)
     if (listen(server_fd, 3) < 0)
     {
-        printf("listen failed");
+        printf("listen failed in FMU(%d)\n", fmuNum);
         close(server_fd);
         r = 3;
     }
@@ -62,62 +62,25 @@ int initSocket(int portNumber)
     timeout.tv_usec = 0;
     setsockopt(server_fd, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout));
 
+    printf("Socket server is listening in FMU(%d)\n", fmuNum);
+
     // // 5. Accept client
     if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen)) < 0)
     {
-        printf("accept failed");
+        printf("accept failed in FMU(%d)\n", fmuNum);
         close(server_fd);
         r = 4;
     }
+
+    printf("Socket client is accepted in FMU(%d)\n", fmuNum);
 
     // snprintf(init_command, BUFFER_SIZE, "init");
 
     if (new_socket <= 0)
     {
-        printf("Socket is already closed or invalid. (init)\n");
+        printf("Socket is already closed or invalid. (init) in FMU(%d)\n", fmuNum);
         return 5;
     }
-
-    sent_bytes = write(new_socket, init_command, strlen(init_command));
-
-    if (sent_bytes < 0)
-    {
-        printf("Error sending init command");
-        close(new_socket);
-        close(server_fd);
-        return 6;
-    }
-
-
-    while (1)
-    {
-        read_bytes = read(new_socket, buffer, BUFFER_SIZE);
-
-        if (read_bytes < 0)
-        {
-            printf("Error reading from socket");
-            r = 6;
-        }
-        else if (read_bytes == 0)
-        {
-            printf("No data received from client, retrying...\n");
-        }
-        else
-        {
-            buffer[read_bytes] = '\0';
-            if (strcmp(buffer, "complete") == 0)
-            {
-                printf("Received 'complete' message from client\n");
-                break; // exit loop once 'complete' is received
-            }
-            else
-            {
-                printf("Unexpected emssage: %s\n", buffer);
-            }
-        }
-    }
-
-    // isInitialized = 1;
 
     return r;
 
@@ -187,11 +150,12 @@ void deinitSocket(void)
 }
 
 // hrkim : SocketToFMI -> ascii to string block -> output
-int SocketToFMI(unsigned char *canFrame)
+int SocketToFMI(unsigned char *canFrame, int fmuNum)
 {
     char buffer[BUFFER_SIZE] = {0};
     int read_bytes;
     int r = 0;
+    static int cnt = 0;
 
     memset(canFrame, 0, 256);
 
@@ -208,7 +172,8 @@ int SocketToFMI(unsigned char *canFrame)
 
         else if (read_bytes == 0)
         {
-            printf("No data received from socket (Socket To FMI)\n");
+            printf("No data received from socket (Socket To FMI) in FMU(%d)\n", fmuNum);
+            break;
         }
 
         else
@@ -219,7 +184,7 @@ int SocketToFMI(unsigned char *canFrame)
 
             if (strcmp(token, "complete") == 0)
             {
-                printf("Received 'dostep complete' message");
+                // printf("Received 'dostep complete' message in FMU(%d)\n", fmuNum);
             }
 
             token = strtok(NULL, ",");
@@ -232,14 +197,14 @@ int SocketToFMI(unsigned char *canFrame)
                 if (token != NULL)
                 {
                     snprintf((char*)canFrame, 256, "%s", token);
-                    printf(", Received CanFrame : %s", canFrame);
+                    // printf("Received CanFrame from vECU(%d): %s\n", fmuNum, canFrame);
                 }
             }
             else
             {
                 snprintf((char*)canFrame, 256, "0-0-0-0-0-");
             }
-            printf("\n");
+            // printf("\n");
             break;
         }
     }
@@ -248,7 +213,7 @@ int SocketToFMI(unsigned char *canFrame)
 }
 
 // hrkim : intput -> string to ascii -> FMIToSocket
-int FMIToSocket(double stepSize, const unsigned char *canFrame)
+int FMIToSocket(double stepSize, const unsigned char *canFrame, int fmuNum)
 {
     int r = 0;
     ssize_t sent_bytes;
@@ -258,11 +223,28 @@ int FMIToSocket(double stepSize, const unsigned char *canFrame)
     // Check if the socket is valid
     if (new_socket <= 0)
     {
-        printf("Socket is not connected\n");
+        printf("Socket is not connected (fmuNum : %d)\n", fmuNum);
         return 1;
     }
 
-    if (canFrame[0] != '1')
+    if (cnt == 0)
+    {
+        snprintf(command, BUFFER_SIZE, "init");
+        sent_bytes = write(new_socket, command, strlen(command));
+
+        if (sent_bytes < 0)
+        {
+            perror("Error sending data to socket");
+            r = 2;
+        }
+        else
+        {
+            printf("Sent %s command to vECU(%d)\n", command, fmuNum);
+        }
+
+    }
+
+    else if (canFrame[0] != '1')
     {
         snprintf(command, BUFFER_SIZE, "dostep,%f", stepSize);
         sent_bytes = write(new_socket, command, strlen(command));
@@ -274,16 +256,18 @@ int FMIToSocket(double stepSize, const unsigned char *canFrame)
         }
         else
         {
-            printf("Sent %s command to vECU\n", command);
+            // printf("Sent %s command to vECU(%d)\n", command, fnuNum);
         }
     }
     
-    // Send the data over the socket
+    // Send the CAN frame over the socket
     else
     {
-        snprintf(command, BUFFER_SIZE, "can,%s,%f", canFrame + 2, stepSize); // to skip "1-"
+        snprintf(command, BUFFER_SIZE, "can,%s,%f", canFrame, stepSize); // to skip "1-"
+        // printf("can command : %s\n", command);
 
         sent_bytes = write(new_socket, command, strlen(command));
+        // printf("write done\n");
 
         if (sent_bytes < 0)
         {
@@ -292,11 +276,12 @@ int FMIToSocket(double stepSize, const unsigned char *canFrame)
         }
         else
         {
-            printf("Sent can command to vECU : %s", command);
+            // printf("Sent can command to vECU(%d) : %s\n", fmuNum, command);
         }
 
     }
-    printf("step in controller : %d\n", cnt++);
+    // printf("step in controller : %d\n", cnt++);
+    cnt++;
     return r;
 
 }

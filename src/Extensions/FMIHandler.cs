@@ -75,7 +75,7 @@ namespace Antmicro.Renode.Core
 
                 byte[] messageBuffer = Encoding.ASCII.GetBytes(completionMessage);
                 stream.Write(messageBuffer, 0, messageBuffer.Length);
-                Console.WriteLine($"Sent completion message to server: {completionMessage}");
+                // Console.WriteLine($"Sent completion message to server: {completionMessage}");
             }
             else
             {
@@ -98,7 +98,7 @@ namespace Antmicro.Renode.Core
             {
                 // Convert bytes to string command
                 string command = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-                Console.WriteLine($"Received command: {command}");
+                // Console.WriteLine($"Received command: {command}");
                 return command;
             }
             return null;
@@ -148,7 +148,7 @@ namespace Antmicro.Renode.Core
                             try
                             {
                                 EmulationManager.Instance.CurrentEmulation.RunFor(parsedPeriod);
-                                Console.WriteLine("dostep completed successfully.");
+                                // Console.WriteLine("dostep completed successfully.");
                                 monitor.Parse("currentTime");
 
                             }
@@ -188,7 +188,7 @@ namespace Antmicro.Renode.Core
                             // this.Log(LogLevel.Debug, $"hrkim-Processing CAN message with ID: {canMessageId}, Data: {canMessageData}");
                             
                             var rxCANMessage = ProcessCANMessage(canMessageId, canMessageData);
-                            Console.WriteLine($"hrkim-rxCANMessage in can command: {rxCANMessage}");
+                            // Console.WriteLine($"hrkim-rxCANMessage in can command: {rxCANMessage}");
 
                             OnCANFrameReceived?.Invoke(rxCANMessage);
                             
@@ -201,7 +201,7 @@ namespace Antmicro.Renode.Core
                                 EmulationManager.Instance.CurrentEmulation.RunFor(parsedPeriod);
                                 // hrkim : for test
                                 monitor.Parse("currentTime");
-                                Console.WriteLine("can completed successfully.");
+                                // Console.WriteLine("can completed successfully.");
                             }
                             catch (Exception ex)
                             {

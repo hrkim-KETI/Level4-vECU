@@ -1,5 +1,6 @@
 #include "canBus.h"
 #include "string.h"
+#include <stdio.h>
 
 int sim_step_us;
 int can_bit_time_ns;
@@ -46,6 +47,8 @@ int insert_can_frame(can_frame_t *p_can_frame)
 
         memcpy(&can_arbi_info.frame_buf[target_node_num-1], p_can_frame, sizeof(can_frame_t));
         can_arbi_info.frame_num++;
+        // hrkim
+        //printf("hrkim debug : frame_num after insert frame=%d\n", can_arbi_info.frame_num);
 
         ret = 0;
     }
@@ -156,7 +159,7 @@ int fmu_can_arbitration(int sof, int id, int fd, int dlc, const unsigned char *d
 
     if(sof == 1)
     {
-        printf("id in CAN BUS FMU : %d\n", id);
+        // printf("id in CAN BUS FMU : %d\n", id);
         new_can_frame.sof = sof;
         new_can_frame.id = id;
         new_can_frame.fd = fd;

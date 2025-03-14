@@ -55,7 +55,12 @@ namespace Antmicro.Renode.Peripherals.Miscellaneous
                     state = value;
                     StateChanged?.Invoke(this, state);
                     //this.Log(LogLevel.Noisy, "LED state changed to {0}", state);
-                    this.Log(LogLevel.Info, "LED state changed to {0}", state);
+                    // this.Log(LogLevel.Info, "LED state changed to {0}", state);
+                    // 현재 Renode 가상 실행 시간(ElapsedVirtualTime) 가져오기
+                    var currentTime = this.GetMachine().ElapsedVirtualTime;
+
+                    // LED 상태 변경 로그 출력 (시간 포함)
+                    this.Log(LogLevel.Error, "LED state changed to {0} at virtual time {1}", state, currentTime);
                 }
             }
         }

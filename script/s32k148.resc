@@ -11,21 +11,24 @@ machine LoadPlatformDescription $ORIGIN/s32k148.repl
 #cpu LogFunctionNames true 
 
 #logLevel -1 # noisy
-logLevel 0 # debug
+#logLevel 0 # debug
 #logLevel 2 # warning
-#logLevel 3 # error
+logLevel 3 # error
 
 #logLevel 1  sysbus.cpu
 #cpu LogFunctionNames true "TASK_OsTask_ASW_FG1_10ms"
-cpu LogFunctionNames true "Sim"
- 
+cpu LogFunctionNames true "Task_OsTask_ASW_FG1_CAN"
+cpu LogFunctionNames true "CanSend"
+
 
 macro reset
 """
+    sysbus LoadELF $ORIGIN/../../elf/S32K_HSP_2019_BASE_R190716_hrkim_renodeSim_exp1_ECU1.elf     # exp1
     #sysbus LoadELF $ORIGIN/../../elf/S32K_HSP_2019_BASE_R190716_hrkim_ADC_LED.elf     # ADC
     #sysbus LoadELF $ORIGIN/../../elf/S32K_HSP_2019_BASE_R190716_hrkim_CAN.elf     # ADC
     #sysbus LoadELF $ORIGIN/../../elf/S32K_HSP_2019_BASE_R190716_hrkim_sim_cdd.elf     # CAN
-    sysbus LoadELF $ORIGIN/../../elf/S32K_HSP_2019_BASE_R190716_hrkim_sim_cdd_test.elf     # CAN with simulation mode
+    #sysbus LoadELF $ORIGIN/../../elf/S32K_HSP_2019_BASE_R190716_hrkim_sim_cdd_test.elf     # CAN with simulation mode
+    #sysbus LoadELF $ORIGIN/../../elf/S32K_HSP_2019_BASE_R190716_hrkim_sim_cdd_test_edit_dbc.elf     # CAN with simulation mode
     #sysbus LoadELF $ORIGIN/../../elf/S32K_HSP_2019_BASE_R190716_hrkim_dbtest.elf     # CAN_DB
     #sysbus LoadELF $ORIGIN/../../elf/S32K_HSP_2019_BASE_R190716_hrkim_renode.elf       # Test 1-5
     cpu VectorTableOffset `sysbus GetSymbolAddress "Os_ExceptionVectorTable"`

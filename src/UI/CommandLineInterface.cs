@@ -142,7 +142,7 @@ namespace Antmicro.Renode.UI
 
                                 else
                                 {
-                                    Console.WriteLine($"step : {cnt++}, command : {command}");
+                                    // Console.WriteLine($"step : {cnt++}, command : {command}");
                                     // cnt++;
                                 }  
 

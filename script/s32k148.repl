@@ -17,6 +17,7 @@ flexram: Memory.MappedMemory @ sysbus 0x14000000
     size: 0x1000 
 
 sram_l: Memory.MappedMemory @ sysbus 0x1C000000 
+//sram_l: Memory.ArrayMemory @ sysbus 0x1C000000 
     size: 0x4000000
 
 sram_u: Memory.MappedMemory @ sysbus 0x20000000 
@@ -112,6 +113,7 @@ portE: GPIOPort.NXPGPIOPort @ {
     13 -> led1@0
     12 -> led2@0
     11 -> led3@0
+    16 -> led4@0
 
 //dmatcd : Miscellaneous.S32K148_DMATCD @ sysbus 0x40009000
 
@@ -121,6 +123,7 @@ led0: Miscellaneous.LED @ portE 14
 led1: Miscellaneous.LED @ portE 13
 led2: Miscellaneous.LED @ portE 12
 led3: Miscellaneous.LED @ portE 11
+led4: Miscellaneous.LED @ portE 16
 
 
 //ftfc: Miscellaneous.S32K148_FTFC @ sysbus 0x40020000
