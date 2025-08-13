@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<fmiModelDescription fmiVersion="2.0" generationDateAndTime="2025-05-18T08:22:01Z" generationTool="Simulink (R2024b)" guid="{58bbd77e-b2bc-5452-e1fc-57647047c7bd}" modelName="vECUcontroller" numberOfEventIndicators="0" variableNamingConvention="structured" version="1.112">
+  <CoSimulation canBeInstantiatedOnlyOncePerProcess="true" canGetAndSetFMUstate="true" canHandleVariableCommunicationStepSize="false" canNotUseMemoryManagementFunctions="true" canSerializeFMUstate="true" modelIdentifier="vECUcontroller">
+    <SourceFiles>
+      <File name="vECUcontroller.c"/>
+      <File name="vECUcontroller_data.c"/>
+      <File name="vECUwrapper.c"/>
+      <File name="RTWCG_FMU_util.c"/>
+      <File name="vECUcontroller_fmu.c"/>
+    </SourceFiles>
+  </CoSimulation>
+  <DefaultExperiment startTime="0" stepSize="0.001" stopTime="3"/>
+  <VendorAnnotations>
+    <Tool name="Simulink">
+      <Simulink>
+        <ImportCompatibility FMUProduct="standalone FMU" requireMATLABOnPath="no" requireRelease="all"/>
+        <SimulinkModelInterface>
+          <Inport blockPath="vECUcontroller/In1" dataType="string" dimension="[1]" portName="In1" portNumber="1" sampleTime="[0.001     0]" uniquePortName="In1" unit=""/>
+          <Outport blockPath="vECUcontroller/Out1" dataType="string" dimension="[1]" portName="Out1" portNumber="1" sampleTime="[0.001     0]" uniquePortName="Out1" unit=""/>
+        </SimulinkModelInterface>
+      </Simulink>
+    </Tool>
+  </VendorAnnotations>
+  <ModelVariables>
+    <ScalarVariable causality="input" description="In1" name="In1" valueReference="0" variability="discrete">
+      <String start="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+      <!--Index = 1-->
+    </ScalarVariable>
+    <ScalarVariable causality="output" description="Out1" initial="calculated" name="Out1" valueReference="1" variability="discrete">
+      <String/>
+      <!--Index = 2-->
+    </ScalarVariable>
+    <ScalarVariable causality="independent" description="time" name="time" valueReference="0" variability="continuous">
+      <Real/>
+      <!--Index = 3-->
+    </ScalarVariable>
+    <ScalarVariable causality="parameter" description="stepSize" initial="exact" name="stepSize" valueReference="1" variability="tunable">
+      <Real start="0.001"/>
+      <!--Index = 4-->
+    </ScalarVariable>
+    <ScalarVariable causality="parameter" description="fmuNum" initial="exact" name="fmuNum" valueReference="0" variability="tunable">
+      <Integer start="49"/>
+      <!--Index = 5-->
+    </ScalarVariable>
+    <ScalarVariable causality="parameter" description="portVal" initial="exact" name="portVal" valueReference="1" variability="tunable">
+      <Integer start="33349"/>
+      <!--Index = 6-->
+    </ScalarVariable>
+  </ModelVariables>
+  <ModelStructure>
+    <Outputs>
+      <Unknown index="2"/>
+    </Outputs>
+    <InitialUnknowns>
+      <Unknown index="2"/>
+    </InitialUnknowns>
+  </ModelStructure>
+</fmiModelDescription>

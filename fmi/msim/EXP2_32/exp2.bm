@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BlockMod>
+	<!--Blocks-->
+	<Blocks>
+		<Block name="canBusModel">
+			<Position>48, 320</Position>
+			<Size>128, 192</Size>
+			<!--Sockets-->
+			<Sockets>
+				<Socket name="CAN_IN_1">
+					<Position>0, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_2">
+					<Position>0, 32</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_3">
+					<Position>0, 48</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_4">
+					<Position>0, 64</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_5">
+					<Position>0, 80</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_6">
+					<Position>0, 96</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_7">
+					<Position>0, 112</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_8">
+					<Position>0, 128</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_9">
+					<Position>0, 144</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_10">
+					<Position>0, 160</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_11">
+					<Position>0, 176</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_12">
+					<Position>0, 0</Position>
+					<Orientation>Vertical</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_13">
+					<Position>16, 0</Position>
+					<Orientation>Vertical</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_14">
+					<Position>32, 0</Position>
+					<Orientation>Vertical</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_15">
+					<Position>48, 0</Position>
+					<Orientation>Vertical</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_16">
+					<Position>64, 0</Position>
+					<Orientation>Vertical</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_17">
+					<Position>80, 0</Position>
+					<Orientation>Vertical</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_18">
+					<Position>96, 0</Position>
+					<Orientation>Vertical</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_19">
+					<Position>112, 0</Position>
+					<Orientation>Vertical</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_20">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_21">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_22">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_23">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_24">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_25">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_26">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_27">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_28">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_29">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_30">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_31">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_32">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_33">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_34">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_35">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_36">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_37">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_38">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_39">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_40">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_41">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_42">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_43">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_44">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_45">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_46">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_47">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_48">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_49">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_50">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_51">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_52">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_53">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_54">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_55">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_56">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_57">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_58">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_59">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_60">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_61">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_62">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_63">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_IN_64">
+					<Position>112, 0</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="CAN_OUT">
+					<Position>128, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>false</Inlet>
+				</Socket>
+			</Sockets>
+		</Block>
+		<Block name="vECUcontroller_1">
+			<Position>400, 432</Position>
+			<Size>128, 192</Size>
+			<!--Sockets-->
+			<Sockets>
+				<Socket name="In1">
+					<Position>0, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>true</Inlet>
+				</Socket>
+				<Socket name="Out1">
+					<Position>128, 16</Position>
+					<Orientation>Horizontal</Orientation>
+					<Inlet>false</Inlet>
+				</Socket>
+			</Sockets>
+		</Block>
+	</Blocks>
+</BlockMod>

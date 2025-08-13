@@ -1,0 +1,24 @@
+Executing Renode with FMI=33349 and RESC=/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/script/EXP2/s32k148_exp2_ECU1.resc
+hrkim : Main1
+hrkim : RebuildInstance test
+hrkim : EmulationManager test
+12:40:34.2211 [INFO] RunForCommand initialized
+12:40:34.5454 [INFO] Loaded monitor commands from: /home/hrkim/project/1_renodeVECU/renode/scripts/monitor.py
+Connected to server at localhost:33349
+12:42:57.0047 [INFO] Including script: /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/script/EXP2/s32k148_exp2_ECU1.resc
+12:42:57.0198 [INFO] Old file /home/hrkim/project/1_renodeVECU/renode/hrkim/log/s32k148_AUTOSAR-renode_ECU1.log moved to /home/hrkim/project/1_renodeVECU/renode/hrkim/log/s32k148_AUTOSAR-renode_ECU1.log.4465
+(using command) hrkim debug 1
+12:42:57.0387 [INFO] System bus created.
+Initializing simulation with resc file: /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/script/EXP2/s32k148_exp2_ECU1.resc
+12:43:49.4389 [ERROR] portE.led0: LED state changed to True at virtual time [Domain = Elapsed Virtual Time: 00:00:00.002600000
+    Elapsed Host Time: 00:00:00.161378900
+    Current load: 41.542
+    Cumulative load: 62.0688076923077
+    State: WaitingForReportBack
+    Advance immediately: False
+    Quantum: 00:00:00.000100000, TimeElapsed = 00:00:00.002600000]
+Emulation is quitted successfully.
+In the quit condition
+Disconnected from server.
+Renode: Fatal IO error 11 (Resource temporarily unavailable) on X server localhost:12.0.
+Renode execution finished for FMI=33349

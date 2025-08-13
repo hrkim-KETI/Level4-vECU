@@ -13,7 +13,8 @@ CanFDSpeed_bps_Val = 5000000;
 
 % Initial port value and the number of FMUs to generate
 portVal = int32(33300);
-numCopies = 8; % Number of FMUs to generate
+numCopies = 80; % Number of FMUs to generate
+
 
 % Define additional variables used in the model
 fmuNum = int32(0); % Initialize fmuNum
@@ -26,17 +27,16 @@ load_system('./simulink/vECUcontroller.slx');
 set_param('vECUcontroller', 'FixedStep', FixedStepVal);
 
 for i = 1:numCopies
-    % Update portVal and fmuNum for each FMU generation
-    currentPortVal = portVal + 1;
-    fmuNum = i; % Update fmuNum for this iteration
+% Update portVal and fmuNum for each FMU generation
+currentPortVal = portVal + 1;
+fmuNum = i; % Update fmuNum for this iteration
+% Assign updated values to the base workspace
+assignin('base', 'portVal', int32(currentPortVal));  
+assignin('base', 'fmuNum', int32(fmuNum));
 
-    % Assign updated values to the base workspace
-    assignin('base', 'portVal', int32(currentPortVal));  
-    assignin('base', 'fmuNum', int32(fmuNum));
-
-    % Export the FMU with a unique name
-    fmuName = sprintf('vECUcontroller_%d.fmu', i);
-    exportToFMU2CS('vECUcontroller', 'AddIcon', 'off', 'SaveSourceCodeToFMU', 'on', 'SaveDirectory', save_directory_path, 'FMUName', fmuName);
+% Export the FMU with a unique name
+fmuName = sprintf('vECUcontroller_%d.fmu', i);
+exportToFMU2CS('vECUcontroller', 'AddIcon', 'off', 'SaveSourceCodeToFMU', 'on', 'SaveDirectory', save_directory_path, 'FMUName', fmuName);
 end
 
 save_system;

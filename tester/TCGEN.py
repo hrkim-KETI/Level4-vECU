@@ -2,26 +2,27 @@ import os
 
 template = """
 *** Variables ***
-${PLATFORM}          @hrkim/Renode/script/s32k148.repl
-${ELF}               @hrkim/Renode/elf/S32K_HSP_2019_BASE_R190716_hrkim_ADC_LED.elf
-@{LED_PINS}          11     12     13     14
-${ADC_CHANNEL}       1
-${ADC_REPEAT}        100
-${DELAY}             100ms
-${TIMEOUT}           10s
-${POLL_INTERVAL}     1ms
+${PLATFORM}             @hrkim/Level4-vECU/script/s32k148.repl
+${ELF}                  @hrkim/elf/S32K_HSP_2019_BASE_R190716_hrkim_ADC_LED.elf
+@{LED_PINS}             11     12     13     14
+${ADC_CHANNEL}           1
+${ADC_REPEAT}           100
+${DELAY}                100ms
+${TIMEOUT}              10s
+${POLL_INTERVAL}        10ms
+${LED_TIMEOUT}          10s
+${LED_POLL_INTERVAL}    10ms
 
 *** Keywords ***
 Create Machine
     Execute Command                 mach create "s32k148_AUTOSAR"
-    Execute Command                 machine LoadPlatformDescription ${PLATFORM}  
+    Execute Command                 machine LoadPlatformDescription ${PLATFORM}
     Execute Command                 sysbus LoadELF ${ELF}
     ${vector_table_offset}=         Execute Command     sysbus GetSymbolAddress "Os_ExceptionVectorTable"
     Execute Command                 sysbus.cpu VectorTableOffset ${vector_table_offset}
 
 Feed Sample To ADC
     [Arguments]     ${value}    ${channel}  ${repeat}
-    #Log to Console      Feeding sample to ADC: value=${value}, channel=${channel}
     Execute Command     sysbus.adc0 FeedSample ${value} ${channel} ${repeat}
 
 Check If Read Is Done
@@ -44,13 +45,22 @@ Reset GPIO
 Read LED Value
     [Arguments]     ${pin}
     ${LED_VALUE}=       Execute Command    sysbus.portE ReadPin ${pin}
+    ${LED_VALUE}=       Convert To Integer    ${LED_VALUE}
     RETURN              ${LED_VALUE}
-    
+
 Calc Expected LED Values
     [Arguments]     ${adc_value}
     ${led_values}=      Evaluate    [int((int(${adc_value} / 256)) >> i) & 1 for i in range(4)]
-    #Log to Console     expected LED values: ${led_values}
     RETURN              ${led_values}
+
+Check Single LED Pin
+    [Arguments]     ${pin}    ${expected}
+    ${actual}=    Read LED Value    ${pin}
+    Should Be Equal As Numbers    ${actual}    ${expected}
+
+Wait For LED Pin To Match
+    [Arguments]     ${pin}    ${expected}
+    Wait Until Keyword Succeeds    ${LED_TIMEOUT}    ${LED_POLL_INTERVAL}    Check Single LED Pin    ${pin}    ${expected}
 
 *** Test Cases ***
 Test Case ${ADC_value}
@@ -62,10 +72,8 @@ Test Case ${ADC_value}
     ${expected_led_values}=    Calc Expected LED Values    ${ADC_value}
     Wait Until Read Is Done
 
-    FOR    ${index}    IN RANGE    0    4
-        ${led_value}=    Read LED Value    ${LED_PINS[${index}]}
-        #Log To Console    LED pin=${LED_PINS[${index}]}, Read LED value=${led_value}, Expected value=${expected_led_values[${index}]}
-        Should Be Equal As Numbers    ${led_value}    ${expected_led_values[${index}]}
+    FOR    ${i}    IN RANGE    0    4
+        Wait For LED Pin To Match    ${LED_PINS[${i}]}    ${expected_led_values[${i}]}
     END
 """
 

@@ -30,3 +30,6 @@ cp -a ./src/Extensions/. ${RENODE_HOME}/src/Infrastructure/src/Emulator/Extensio
 
 # Copy all files from Tools
 cp -a ./src/Network/. ${RENODE_HOME}/src/Infrastructure/src/Emulator/Extensions/Tools/Network/
+
+# Copy all files from GPIOPort
+cp -a ./src/GPIOPort/. ${RENODE_HOME}/src/Infrastructure/src/Emulator/Peripherals/Peripherals/GPIOPort/

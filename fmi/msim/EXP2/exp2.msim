@@ -1,5 +1,5 @@
 # Created:	금 1월 31 15:21:02 2025
-# LastModified:	금 2월 28 19:27:20 2025
+# LastModified:	일 5월 18 14:17:41 2025
 
 # 
 # 18:01:20.4856 [INFO] System bus created.C=
@@ -10,7 +10,7 @@
 # hrkim debug - cycle.m_slaves.size(): 4
 
 tStart                   0 s
-tEnd                     10 s
+tEnd                     5 s
 hMax                     30 min
 hMin                     1e-05 s
 hFallBackLimit           0.001 s

@@ -17,7 +17,6 @@ flexram: Memory.MappedMemory @ sysbus 0x14000000
     size: 0x1000 
 
 sram_l: Memory.MappedMemory @ sysbus 0x1C000000 
-//sram_l: Memory.ArrayMemory @ sysbus 0x1C000000 
     size: 0x4000000
 
 sram_u: Memory.MappedMemory @ sysbus 0x20000000 
@@ -26,55 +25,20 @@ sram_u: Memory.MappedMemory @ sysbus 0x20000000
 dwt: Miscellaneous.DWT @ sysbus 0xE0001000
     frequency: 80000000
 
-
-//lpspi0: SPI.IMXRT_LPSPI @ sysbus 0x4002C000
-    //-> nvic@26
-
-
-//lpspi1: SPI.IMXRT_LPSPI @ sysbus 0x4002D000
-    //-> nvic@27
-
-
-//lpuart0: UART.Kinetis_LPUART @ sysbus 0x4006A000
-    //IRQ -> nvic@31
-
-
-//lpuart1: UART.Kinetis_LPUART @ sysbus 0x4006B000
-    //IRQ -> nvic@33
-
-
-//can0_mcr: Python.PythonPeripheral @ sysbus 0x40024000
-    //size: 0x4
-    //initable: true
-    //filename: "scripts/pydev/flipflop.py"
-
 can0: CAN.S32K1XX_FlexCAN @ sysbus 0x40024000
     numberOfMessageBuffers: 32
     IRQ0 -> nvic@81
     IRQ1 -> nvic@82
 
-//lpit: Timers.S32K_LPIT @ sysbus 0x40037000
-    //frequency: 8000000
-//    frequency: 32000000
-    //IRQ -> nvic@50
-
 ftm: Timers.S32K148_FTM @ sysbus 0x40038000
     frequency: 80000000
     IRQ -> nvic@104
 
-//lptmr: Timers.S32K_LPTMR @ sysbus 0x40040000
-    //-> nvic@8
-    //frequency: 80000000
-//    frequency: 48000000
-
-
 adc0: Analog.S32K148_ADC @ sysbus 0x4003B000
-
 
 portGPIO: Miscellaneous.CombinedInput
     numberOfInputs: 5
     -> nvic@9
-
 
 portA: GPIOPort.NXPGPIOPort @ {
     sysbus new Bus.BusMultiRegistration { address: 0x400FF000; size: 0x40; region: "gpio" };
@@ -113,9 +77,6 @@ portE: GPIOPort.NXPGPIOPort @ {
     13 -> led1@0
     12 -> led2@0
     11 -> led3@0
-    16 -> led4@0
-
-//dmatcd : Miscellaneous.S32K148_DMATCD @ sysbus 0x40009000
 
 scg: Miscellaneous.S32K148_SCG @ sysbus 0x40064000
 
@@ -123,22 +84,5 @@ led0: Miscellaneous.LED @ portE 14
 led1: Miscellaneous.LED @ portE 13
 led2: Miscellaneous.LED @ portE 12
 led3: Miscellaneous.LED @ portE 11
-led4: Miscellaneous.LED @ portE 16
 
 
-//ftfc: Miscellaneous.S32K148_FTFC @ sysbus 0x40020000
-
-//sim: Miscellaneous.S32K148_SIM @ sysbus 0x40048000
-
-//pcc: Miscellaneous.S32K148_PCC @ sysbus 0x40065000
-
-//rpc: Miscellaneous.S32K148_RPC @ sysbus 0x4007F000
-
-//sysbus:
-    //init:
-        //ApplySVD @hrkim/script/S32K148.svd
-//        Tag <0x40024000, 0x40024003> "CAN0:MCR" 0x0
-//        Tag <0x40038000, 0x40038003> "FTM0:SC" 0x1
-//        Tag <0x400650DC, 0x400650DF> "PPC:PPC_LPIT" 0xF9FFFFFF
-//        Tag <0x400651A8, 0x400651AB> "PPC:PPC_LPUART0" 0xF9FFFFFF
-//        Tag <0x400651AC, 0x400651AF> "PPC:PPC_UART" 0xF9FFFFFF

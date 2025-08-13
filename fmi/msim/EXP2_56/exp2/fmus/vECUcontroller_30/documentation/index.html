@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>This FMU was generated for <b>vECUcontroller</b> through Simulink Compiler&reg; and FMU Builder Support Package&reg;.</p>
+<h2>Source code distribution</h2>
+<p>The source code of this FMU is located in sources/ directory. The files listed below are required:</p>
+<p>vECUcontroller.c<br/>
+vECUcontroller_data.c<br/>
+vECUwrapper.c<br/>
+RTWCG_FMU_util.c<br/>
+vECUcontroller_fmu.c<br/></p>
+<p>To build standalone executables or static library, compile FMU source code with standard FMI 2.0 header files, downloadable from <a href="http://www.fmi-standard.org">www.fmi-standard.org</a>.</p>
+<h3>Instructions for recompiling FMU dynamic library from source</h3>
+<p>After dynamic library is generated, copy the file into a target specific directory (for example: linux64, win64 or darwin64) under binaries/ in FMU zip package.</p>
+<h4>Build command for Linux using gcc</h4>
+<p>gcc -I&lt;directoryWithFMUHeader&gt; -I&lt;directoryWithSourceCode&gt; -c &lt;source files in model description.xml&gt; -fPIC</p>
+<p>gcc -shared -o &lt;filename.so&gt; &lt;generated object files&gt; -lm</p>
+<p>For example: gcc -I/local/shared/fmuexport/fmi2/ -I/tmp/FMUExport/vECUcontroller/sources/ -c vECUcontroller.c vECUcontroller_data.c vECUwrapper.c RTWCG_FMU_util.c vECUcontroller_fmu.c -fPIC</p>
+<p>gcc -shared -o vECUcontroller.so vECUcontroller.o vECUcontroller_data.o vECUwrapper.o RTWCG_FMU_util.o vECUcontroller_fmu.o -lm</p>
+<h4>Build command for Windows using MSVC x64 Native Tools Command Prompt</h4>
+<p>CL -I&lt;directoryWithFMUHeader&gt; -I&lt;directoryWithSourceCode&gt; &lt;source files in model description.xml&gt; -nologo -GS -c</p>
+<p>LINK -DLL -OUT:&lt;filename.dll&gt; &lt;generated object files&gt; -MACHINE:X64</p>
+<p>For example: CL -IC:&#92;fmuexport&#92;fmi2&#92; -IC:&#92;temp&#92;FMUExport&#92;vECUcontroller&#92;sources vECUcontroller.c vECUcontroller_data.c vECUwrapper.c RTWCG_FMU_util.c vECUcontroller_fmu.c -nologo -GS -c</p>
+<p>LINK -DLL -OUT:vECUcontroller.dll vECUcontroller.obj vECUcontroller_data.obj vECUwrapper.obj RTWCG_FMU_util.obj vECUcontroller_fmu.obj -MACHINE:X64</p>
+<h4>Build command for macOS using gcc</h4>
+<p>gcc -I&lt;directoryWithFMUHeader&gt; -I&lt;directoryWithSourceCode&gt; -c &lt;source files in model description.xml&gt; -fPIC</p>
+<p>gcc -shared -o &lt;filename.dylib&gt; &lt;generated object files&gt; -lm</p>
+<p>For example: gcc -I/local/shared/fmuexport/fmi2/ -I/tmp/FMUExport/vECUcontroller/sources/ -c vECUcontroller.c vECUcontroller_data.c vECUwrapper.c RTWCG_FMU_util.c vECUcontroller_fmu.c -fPIC</p>
+<p>gcc -shared -o vECUcontroller.dylib vECUcontroller.o vECUcontroller_data.o vECUwrapper.o RTWCG_FMU_util.o vECUcontroller_fmu.o -lm</p>
+</body>
+</html>

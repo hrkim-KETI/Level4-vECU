@@ -1,0 +1,214 @@
+# Auto-generated: 2025. 05. 19. (월) 11:14:05 KST
+tStart                   0 s
+tEnd                     5 s
+hMax                     30 min
+hMin                     1e-05 s
+hFallBackLimit           0.001 s
+hStart                   0.001 s
+hOutputMin               0.001 s
+outputTimeUnit           s
+adjustStepSize           no
+preventOversteppingOfEndTime yes
+absTol                   1e-06
+relTol                   1e-05
+MasterMode               GAUSS_JACOBI
+ErrorControlMode         NONE
+maxIterations            1
+writeInternalVariables   no
+
+simulator 0 0 canBusModel #4682b4 "../../fmu/canBusModel.fmu"
+simulator 1 0 vECUcontroller_1 #ffd700 "../../fmu/vECUcontroller_1.fmu"
+simulator 2 0 vECUcontroller_2 #20b2aa "../../fmu/vECUcontroller_2.fmu"
+simulator 3 0 vECUcontroller_3 #a0522d "../../fmu/vECUcontroller_3.fmu"
+simulator 4 0 vECUcontroller_4 #ffd700 "../../fmu/vECUcontroller_4.fmu"
+simulator 5 0 vECUcontroller_5 #008000 "../../fmu/vECUcontroller_5.fmu"
+simulator 6 0 vECUcontroller_6 #ffd700 "../../fmu/vECUcontroller_6.fmu"
+simulator 7 0 vECUcontroller_7 #ffd700 "../../fmu/vECUcontroller_7.fmu"
+simulator 8 0 vECUcontroller_8 #4682b4 "../../fmu/vECUcontroller_8.fmu"
+simulator 9 0 vECUcontroller_9 #ffd700 "../../fmu/vECUcontroller_9.fmu"
+simulator 10 0 vECUcontroller_10 #20b2aa "../../fmu/vECUcontroller_10.fmu"
+simulator 11 0 vECUcontroller_11 #a0522d "../../fmu/vECUcontroller_11.fmu"
+simulator 12 0 vECUcontroller_12 #ffd700 "../../fmu/vECUcontroller_12.fmu"
+simulator 13 0 vECUcontroller_13 #008000 "../../fmu/vECUcontroller_13.fmu"
+simulator 14 0 vECUcontroller_14 #ffd700 "../../fmu/vECUcontroller_14.fmu"
+simulator 15 0 vECUcontroller_15 #ffd700 "../../fmu/vECUcontroller_15.fmu"
+simulator 16 0 vECUcontroller_16 #4682b4 "../../fmu/vECUcontroller_16.fmu"
+simulator 17 0 vECUcontroller_17 #ffd700 "../../fmu/vECUcontroller_17.fmu"
+simulator 18 0 vECUcontroller_18 #20b2aa "../../fmu/vECUcontroller_18.fmu"
+simulator 19 0 vECUcontroller_19 #a0522d "../../fmu/vECUcontroller_19.fmu"
+simulator 20 0 vECUcontroller_20 #ffd700 "../../fmu/vECUcontroller_20.fmu"
+simulator 21 0 vECUcontroller_21 #008000 "../../fmu/vECUcontroller_21.fmu"
+simulator 22 0 vECUcontroller_22 #ffd700 "../../fmu/vECUcontroller_22.fmu"
+simulator 23 0 vECUcontroller_23 #ffd700 "../../fmu/vECUcontroller_23.fmu"
+simulator 24 0 vECUcontroller_24 #4682b4 "../../fmu/vECUcontroller_24.fmu"
+simulator 25 0 vECUcontroller_25 #ffd700 "../../fmu/vECUcontroller_25.fmu"
+simulator 26 0 vECUcontroller_26 #20b2aa "../../fmu/vECUcontroller_26.fmu"
+simulator 27 0 vECUcontroller_27 #a0522d "../../fmu/vECUcontroller_27.fmu"
+simulator 28 0 vECUcontroller_28 #ffd700 "../../fmu/vECUcontroller_28.fmu"
+simulator 29 0 vECUcontroller_29 #008000 "../../fmu/vECUcontroller_29.fmu"
+simulator 30 0 vECUcontroller_30 #ffd700 "../../fmu/vECUcontroller_30.fmu"
+simulator 31 0 vECUcontroller_31 #ffd700 "../../fmu/vECUcontroller_31.fmu"
+simulator 32 0 vECUcontroller_32 #4682b4 "../../fmu/vECUcontroller_32.fmu"
+simulator 33 0 vECUcontroller_33 #ffd700 "../../fmu/vECUcontroller_33.fmu"
+simulator 34 0 vECUcontroller_34 #20b2aa "../../fmu/vECUcontroller_34.fmu"
+simulator 35 0 vECUcontroller_35 #a0522d "../../fmu/vECUcontroller_35.fmu"
+simulator 36 0 vECUcontroller_36 #ffd700 "../../fmu/vECUcontroller_36.fmu"
+simulator 37 0 vECUcontroller_37 #008000 "../../fmu/vECUcontroller_37.fmu"
+simulator 38 0 vECUcontroller_38 #ffd700 "../../fmu/vECUcontroller_38.fmu"
+simulator 39 0 vECUcontroller_39 #ffd700 "../../fmu/vECUcontroller_39.fmu"
+simulator 40 0 vECUcontroller_40 #4682b4 "../../fmu/vECUcontroller_40.fmu"
+simulator 41 0 vECUcontroller_41 #ffd700 "../../fmu/vECUcontroller_41.fmu"
+simulator 42 0 vECUcontroller_42 #20b2aa "../../fmu/vECUcontroller_42.fmu"
+simulator 43 0 vECUcontroller_43 #a0522d "../../fmu/vECUcontroller_43.fmu"
+simulator 44 0 vECUcontroller_44 #ffd700 "../../fmu/vECUcontroller_44.fmu"
+simulator 45 0 vECUcontroller_45 #008000 "../../fmu/vECUcontroller_45.fmu"
+simulator 46 0 vECUcontroller_46 #ffd700 "../../fmu/vECUcontroller_46.fmu"
+simulator 47 0 vECUcontroller_47 #ffd700 "../../fmu/vECUcontroller_47.fmu"
+simulator 48 0 vECUcontroller_48 #4682b4 "../../fmu/vECUcontroller_48.fmu"
+simulator 49 0 vECUcontroller_49 #ffd700 "../../fmu/vECUcontroller_49.fmu"
+simulator 50 0 vECUcontroller_50 #20b2aa "../../fmu/vECUcontroller_50.fmu"
+simulator 51 0 vECUcontroller_51 #a0522d "../../fmu/vECUcontroller_51.fmu"
+simulator 52 0 vECUcontroller_52 #ffd700 "../../fmu/vECUcontroller_52.fmu"
+simulator 53 0 vECUcontroller_53 #008000 "../../fmu/vECUcontroller_53.fmu"
+simulator 54 0 vECUcontroller_54 #ffd700 "../../fmu/vECUcontroller_54.fmu"
+simulator 55 0 vECUcontroller_55 #ffd700 "../../fmu/vECUcontroller_55.fmu"
+simulator 56 0 vECUcontroller_56 #4682b4 "../../fmu/vECUcontroller_56.fmu"
+simulator 57 0 vECUcontroller_57 #ffd700 "../../fmu/vECUcontroller_57.fmu"
+simulator 58 0 vECUcontroller_58 #20b2aa "../../fmu/vECUcontroller_58.fmu"
+simulator 59 0 vECUcontroller_59 #a0522d "../../fmu/vECUcontroller_59.fmu"
+simulator 60 0 vECUcontroller_60 #ffd700 "../../fmu/vECUcontroller_60.fmu"
+simulator 61 0 vECUcontroller_61 #008000 "../../fmu/vECUcontroller_61.fmu"
+simulator 62 0 vECUcontroller_62 #ffd700 "../../fmu/vECUcontroller_62.fmu"
+simulator 63 0 vECUcontroller_63 #ffd700 "../../fmu/vECUcontroller_63.fmu"
+simulator 64 0 vECUcontroller_64 #4682b4 "../../fmu/vECUcontroller_64.fmu"
+
+graph vECUcontroller_1.Out1 canBusModel.CAN_IN_1
+graph canBusModel.CAN_OUT vECUcontroller_1.In1
+graph vECUcontroller_2.Out1 canBusModel.CAN_IN_2
+graph canBusModel.CAN_OUT vECUcontroller_2.In1
+graph vECUcontroller_3.Out1 canBusModel.CAN_IN_3
+graph canBusModel.CAN_OUT vECUcontroller_3.In1
+graph vECUcontroller_4.Out1 canBusModel.CAN_IN_4
+graph canBusModel.CAN_OUT vECUcontroller_4.In1
+graph vECUcontroller_5.Out1 canBusModel.CAN_IN_5
+graph canBusModel.CAN_OUT vECUcontroller_5.In1
+graph vECUcontroller_6.Out1 canBusModel.CAN_IN_6
+graph canBusModel.CAN_OUT vECUcontroller_6.In1
+graph vECUcontroller_7.Out1 canBusModel.CAN_IN_7
+graph canBusModel.CAN_OUT vECUcontroller_7.In1
+graph vECUcontroller_8.Out1 canBusModel.CAN_IN_8
+graph canBusModel.CAN_OUT vECUcontroller_8.In1
+graph vECUcontroller_9.Out1 canBusModel.CAN_IN_9
+graph canBusModel.CAN_OUT vECUcontroller_9.In1
+graph vECUcontroller_10.Out1 canBusModel.CAN_IN_10
+graph canBusModel.CAN_OUT vECUcontroller_10.In1
+graph vECUcontroller_11.Out1 canBusModel.CAN_IN_11
+graph canBusModel.CAN_OUT vECUcontroller_11.In1
+graph vECUcontroller_12.Out1 canBusModel.CAN_IN_12
+graph canBusModel.CAN_OUT vECUcontroller_12.In1
+graph vECUcontroller_13.Out1 canBusModel.CAN_IN_13
+graph canBusModel.CAN_OUT vECUcontroller_13.In1
+graph vECUcontroller_14.Out1 canBusModel.CAN_IN_14
+graph canBusModel.CAN_OUT vECUcontroller_14.In1
+graph vECUcontroller_15.Out1 canBusModel.CAN_IN_15
+graph canBusModel.CAN_OUT vECUcontroller_15.In1
+graph vECUcontroller_16.Out1 canBusModel.CAN_IN_16
+graph canBusModel.CAN_OUT vECUcontroller_16.In1
+graph vECUcontroller_17.Out1 canBusModel.CAN_IN_17
+graph canBusModel.CAN_OUT vECUcontroller_17.In1
+graph vECUcontroller_18.Out1 canBusModel.CAN_IN_18
+graph canBusModel.CAN_OUT vECUcontroller_18.In1
+graph vECUcontroller_19.Out1 canBusModel.CAN_IN_19
+graph canBusModel.CAN_OUT vECUcontroller_19.In1
+graph vECUcontroller_20.Out1 canBusModel.CAN_IN_20
+graph canBusModel.CAN_OUT vECUcontroller_20.In1
+graph vECUcontroller_21.Out1 canBusModel.CAN_IN_21
+graph canBusModel.CAN_OUT vECUcontroller_21.In1
+graph vECUcontroller_22.Out1 canBusModel.CAN_IN_22
+graph canBusModel.CAN_OUT vECUcontroller_22.In1
+graph vECUcontroller_23.Out1 canBusModel.CAN_IN_23
+graph canBusModel.CAN_OUT vECUcontroller_23.In1
+graph vECUcontroller_24.Out1 canBusModel.CAN_IN_24
+graph canBusModel.CAN_OUT vECUcontroller_24.In1
+graph vECUcontroller_25.Out1 canBusModel.CAN_IN_25
+graph canBusModel.CAN_OUT vECUcontroller_25.In1
+graph vECUcontroller_26.Out1 canBusModel.CAN_IN_26
+graph canBusModel.CAN_OUT vECUcontroller_26.In1
+graph vECUcontroller_27.Out1 canBusModel.CAN_IN_27
+graph canBusModel.CAN_OUT vECUcontroller_27.In1
+graph vECUcontroller_28.Out1 canBusModel.CAN_IN_28
+graph canBusModel.CAN_OUT vECUcontroller_28.In1
+graph vECUcontroller_29.Out1 canBusModel.CAN_IN_29
+graph canBusModel.CAN_OUT vECUcontroller_29.In1
+graph vECUcontroller_30.Out1 canBusModel.CAN_IN_30
+graph canBusModel.CAN_OUT vECUcontroller_30.In1
+graph vECUcontroller_31.Out1 canBusModel.CAN_IN_31
+graph canBusModel.CAN_OUT vECUcontroller_31.In1
+graph vECUcontroller_32.Out1 canBusModel.CAN_IN_32
+graph canBusModel.CAN_OUT vECUcontroller_32.In1
+graph vECUcontroller_33.Out1 canBusModel.CAN_IN_33
+graph canBusModel.CAN_OUT vECUcontroller_33.In1
+graph vECUcontroller_34.Out1 canBusModel.CAN_IN_34
+graph canBusModel.CAN_OUT vECUcontroller_34.In1
+graph vECUcontroller_35.Out1 canBusModel.CAN_IN_35
+graph canBusModel.CAN_OUT vECUcontroller_35.In1
+graph vECUcontroller_36.Out1 canBusModel.CAN_IN_36
+graph canBusModel.CAN_OUT vECUcontroller_36.In1
+graph vECUcontroller_37.Out1 canBusModel.CAN_IN_37
+graph canBusModel.CAN_OUT vECUcontroller_37.In1
+graph vECUcontroller_38.Out1 canBusModel.CAN_IN_38
+graph canBusModel.CAN_OUT vECUcontroller_38.In1
+graph vECUcontroller_39.Out1 canBusModel.CAN_IN_39
+graph canBusModel.CAN_OUT vECUcontroller_39.In1
+graph vECUcontroller_40.Out1 canBusModel.CAN_IN_40
+graph canBusModel.CAN_OUT vECUcontroller_40.In1
+graph vECUcontroller_41.Out1 canBusModel.CAN_IN_41
+graph canBusModel.CAN_OUT vECUcontroller_41.In1
+graph vECUcontroller_42.Out1 canBusModel.CAN_IN_42
+graph canBusModel.CAN_OUT vECUcontroller_42.In1
+graph vECUcontroller_43.Out1 canBusModel.CAN_IN_43
+graph canBusModel.CAN_OUT vECUcontroller_43.In1
+graph vECUcontroller_44.Out1 canBusModel.CAN_IN_44
+graph canBusModel.CAN_OUT vECUcontroller_44.In1
+graph vECUcontroller_45.Out1 canBusModel.CAN_IN_45
+graph canBusModel.CAN_OUT vECUcontroller_45.In1
+graph vECUcontroller_46.Out1 canBusModel.CAN_IN_46
+graph canBusModel.CAN_OUT vECUcontroller_46.In1
+graph vECUcontroller_47.Out1 canBusModel.CAN_IN_47
+graph canBusModel.CAN_OUT vECUcontroller_47.In1
+graph vECUcontroller_48.Out1 canBusModel.CAN_IN_48
+graph canBusModel.CAN_OUT vECUcontroller_48.In1
+graph vECUcontroller_49.Out1 canBusModel.CAN_IN_49
+graph canBusModel.CAN_OUT vECUcontroller_49.In1
+graph vECUcontroller_50.Out1 canBusModel.CAN_IN_50
+graph canBusModel.CAN_OUT vECUcontroller_50.In1
+graph vECUcontroller_51.Out1 canBusModel.CAN_IN_51
+graph canBusModel.CAN_OUT vECUcontroller_51.In1
+graph vECUcontroller_52.Out1 canBusModel.CAN_IN_52
+graph canBusModel.CAN_OUT vECUcontroller_52.In1
+graph vECUcontroller_53.Out1 canBusModel.CAN_IN_53
+graph canBusModel.CAN_OUT vECUcontroller_53.In1
+graph vECUcontroller_54.Out1 canBusModel.CAN_IN_54
+graph canBusModel.CAN_OUT vECUcontroller_54.In1
+graph vECUcontroller_55.Out1 canBusModel.CAN_IN_55
+graph canBusModel.CAN_OUT vECUcontroller_55.In1
+graph vECUcontroller_56.Out1 canBusModel.CAN_IN_56
+graph canBusModel.CAN_OUT vECUcontroller_56.In1
+graph vECUcontroller_57.Out1 canBusModel.CAN_IN_57
+graph canBusModel.CAN_OUT vECUcontroller_57.In1
+graph vECUcontroller_58.Out1 canBusModel.CAN_IN_58
+graph canBusModel.CAN_OUT vECUcontroller_58.In1
+graph vECUcontroller_59.Out1 canBusModel.CAN_IN_59
+graph canBusModel.CAN_OUT vECUcontroller_59.In1
+graph vECUcontroller_60.Out1 canBusModel.CAN_IN_60
+graph canBusModel.CAN_OUT vECUcontroller_60.In1
+graph vECUcontroller_61.Out1 canBusModel.CAN_IN_61
+graph canBusModel.CAN_OUT vECUcontroller_61.In1
+graph vECUcontroller_62.Out1 canBusModel.CAN_IN_62
+graph canBusModel.CAN_OUT vECUcontroller_62.In1
+graph vECUcontroller_63.Out1 canBusModel.CAN_IN_63
+graph canBusModel.CAN_OUT vECUcontroller_63.In1
+graph vECUcontroller_64.Out1 canBusModel.CAN_IN_64
+graph canBusModel.CAN_OUT vECUcontroller_64.In1
+
+parameter canBusModel.CanSpeed_bps   500000

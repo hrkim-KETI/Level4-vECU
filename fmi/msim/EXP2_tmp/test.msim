@@ -1,0 +1,35 @@
+# Created:	일 5월 18 14:05:06 2025
+# LastModified:	일 5월 18 14:17:56 2025
+
+tStart                   0 s
+tEnd                     10 s
+hMax                     30 min
+hMin                     1e-05 s
+hFallBackLimit           0.001 s
+hStart                   0.001 s
+hOutputMin               0.001 s
+outputTimeUnit           s
+adjustStepSize           no
+preventOversteppingOfEndTime yes
+absTol                   1e-06
+relTol                   1e-05
+MasterMode               GAUSS_SEIDEL
+ErrorControlMode         NONE
+maxIterations            1
+writeInternalVariables   no
+
+simulator 0 0 canBusModel #008000 "../../fmu/canBusModel.fmu"
+simulator 1 0 vECUcontroller_1 #ffd700 "../../fmu/vECUcontroller_1.fmu"
+simulator 2 0 vECUcontroller_2 #a0522d "../../fmu/vECUcontroller_2.fmu"
+simulator 3 0 vECUcontroller_3 #20b2aa "../../fmu/vECUcontroller_3.fmu"
+simulator 4 0 vECUcontroller_4 #0000cd "../../fmu/vECUcontroller_4.fmu"
+
+graph vECUcontroller_1.Out1 canBusModel.CAN_IN_1
+graph canBusModel.CAN_OUT vECUcontroller_1.In1
+graph vECUcontroller_2.Out1 canBusModel.CAN_IN_2
+graph vECUcontroller_3.Out1 canBusModel.CAN_IN_3
+graph vECUcontroller_4.Out1 canBusModel.CAN_IN_4
+graph canBusModel.CAN_OUT vECUcontroller_2.In1
+graph canBusModel.CAN_OUT vECUcontroller_3.In1
+graph canBusModel.CAN_OUT vECUcontroller_4.In1
+

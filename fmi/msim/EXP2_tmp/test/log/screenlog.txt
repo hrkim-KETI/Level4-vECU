@@ -1,0 +1,509 @@
+2025-05-18 14:30:42	[Progress]	[MasterSim::writeVersionInfo]           	MasterSimulator, version 0.9.7
+2025-05-18 14:30:42	[Progress]	[MasterSim::writeVersionInfo]           	Copyright by Andreas Nicolai, released under GPL license (see LICENSE file).
+2025-05-18 14:30:42	[Progress]	[MasterSim::writeVersionInfo]           	
+2025-05-18 14:30:42	[Progress]	[main]                                  	Reading project '/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test.msim'
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::importFMUs]           	
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::importFMUs]           	Importing FMUs
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMU]                 	  canBusModel.fmu
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMU]                 	    /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/fmu/canBusModel.fmu
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Unzipping FMU
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	      into directory: /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/canBusModel
+2025-05-18 14:30:42	[Warning ]	[FMUManager::importFMUAt]               	      Directory exists, unzipping will overwrite files!
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Reading modelDescription.xml
+2025-05-18 14:30:42	[Progress]	[ModelDescription::parseModelDescription]	      /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/canBusModel/modelDescription.xml
+2025-05-18 14:30:42	[Progress]	[ModelDescription::readXMLDoc]          	      CoSimulation, version 2
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Importing shared library
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	      CoSimulation Interface v2
+2025-05-18 14:30:42	[Progress]	[FMUPrivate::loadLibrary]               	    Loading shared library '/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/canBusModel/binaries/linux64/canBusModel.so'.
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMU]                 	  vECUcontroller_1.fmu
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMU]                 	    /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/fmu/vECUcontroller_1.fmu
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Unzipping FMU
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	      into directory: /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_1
+2025-05-18 14:30:42	[Warning ]	[FMUManager::importFMUAt]               	      Directory exists, unzipping will overwrite files!
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Reading modelDescription.xml
+2025-05-18 14:30:42	[Progress]	[ModelDescription::parseModelDescription]	      /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_1/modelDescription.xml
+2025-05-18 14:30:42	[Progress]	[ModelDescription::readXMLDoc]          	      CoSimulation, version 2
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Importing shared library
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	      CoSimulation Interface v2
+2025-05-18 14:30:42	[Progress]	[FMUPrivate::loadLibrary]               	    Loading shared library '/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_1/binaries/linux64/vECUcontroller.so'.
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMU]                 	  vECUcontroller_2.fmu
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMU]                 	    /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/fmu/vECUcontroller_2.fmu
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Unzipping FMU
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	      into directory: /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_2
+2025-05-18 14:30:42	[Warning ]	[FMUManager::importFMUAt]               	      Directory exists, unzipping will overwrite files!
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Reading modelDescription.xml
+2025-05-18 14:30:42	[Progress]	[ModelDescription::parseModelDescription]	      /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_2/modelDescription.xml
+2025-05-18 14:30:42	[Progress]	[ModelDescription::readXMLDoc]          	      CoSimulation, version 2
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Importing shared library
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	      CoSimulation Interface v2
+2025-05-18 14:30:42	[Progress]	[FMUPrivate::loadLibrary]               	    Loading shared library '/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_2/binaries/linux64/vECUcontroller.so'.
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMU]                 	  vECUcontroller_3.fmu
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMU]                 	    /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/fmu/vECUcontroller_3.fmu
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Unzipping FMU
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	      into directory: /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_3
+2025-05-18 14:30:42	[Warning ]	[FMUManager::importFMUAt]               	      Directory exists, unzipping will overwrite files!
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Reading modelDescription.xml
+2025-05-18 14:30:42	[Progress]	[ModelDescription::parseModelDescription]	      /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_3/modelDescription.xml
+2025-05-18 14:30:42	[Progress]	[ModelDescription::readXMLDoc]          	      CoSimulation, version 2
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Importing shared library
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	      CoSimulation Interface v2
+2025-05-18 14:30:42	[Progress]	[FMUPrivate::loadLibrary]               	    Loading shared library '/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_3/binaries/linux64/vECUcontroller.so'.
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMU]                 	  vECUcontroller_4.fmu
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMU]                 	    /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/fmu/vECUcontroller_4.fmu
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Unzipping FMU
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	      into directory: /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_4
+2025-05-18 14:30:42	[Warning ]	[FMUManager::importFMUAt]               	      Directory exists, unzipping will overwrite files!
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Reading modelDescription.xml
+2025-05-18 14:30:42	[Progress]	[ModelDescription::parseModelDescription]	      /home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_4/modelDescription.xml
+2025-05-18 14:30:42	[Progress]	[ModelDescription::readXMLDoc]          	      CoSimulation, version 2
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	    Importing shared library
+2025-05-18 14:30:42	[Progress]	[FMUManager::importFMUAt]               	      CoSimulation Interface v2
+2025-05-18 14:30:42	[Progress]	[FMUPrivate::loadLibrary]               	    Loading shared library '/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test/fmus/vECUcontroller_4/binaries/linux64/vECUcontroller.so'.
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::checkCapabilities]    	
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::checkCapabilities]    	Checking capabilities of FMUs
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::checkCapabilities]    	  Iteration disabled (maximum number of iterations == 1).
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialize]                 	Collecting value references for output quantities
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialize]                 	  Outputs generated from FMU 'canBusModel.fmu':
+2025-05-18 14:30:42	[Progress]	[FMU::addIfNotInList]                   	    Variable 'CAN_OUT' (String), valueRef = 8
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialize]                 	  Outputs generated from FMU 'vECUcontroller_1.fmu':
+2025-05-18 14:30:42	[Progress]	[FMU::addIfNotInList]                   	    Variable 'Out1' (String), valueRef = 1
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialize]                 	  Outputs generated from FMU 'vECUcontroller_2.fmu':
+2025-05-18 14:30:42	[Progress]	[FMU::addIfNotInList]                   	    Variable 'Out1' (String), valueRef = 1
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialize]                 	  Outputs generated from FMU 'vECUcontroller_3.fmu':
+2025-05-18 14:30:42	[Progress]	[FMU::addIfNotInList]                   	    Variable 'Out1' (String), valueRef = 1
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialize]                 	  Outputs generated from FMU 'vECUcontroller_4.fmu':
+2025-05-18 14:30:42	[Progress]	[FMU::addIfNotInList]                   	    Variable 'Out1' (String), valueRef = 1
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	Instantiating simulation slaves
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	  canBusModel (../../fmu/canBusModel.fmu)
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	  vECUcontroller_1 (../../fmu/vECUcontroller_1.fmu)
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	  vECUcontroller_2 (../../fmu/vECUcontroller_2.fmu)
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	  vECUcontroller_3 (../../fmu/vECUcontroller_3.fmu)
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	  vECUcontroller_4 (../../fmu/vECUcontroller_4.fmu)
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	Cycles
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	  Cycle 1:
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	    canBusModel (canBusModel.fmu)
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	    vECUcontroller_1 (vECUcontroller_1.fmu)
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	    vECUcontroller_2 (vECUcontroller_2.fmu)
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	    vECUcontroller_3 (vECUcontroller_3.fmu)
+2025-05-18 14:30:42	[Progress]	[MasterSimulator::instatiateSlaves]     	    vECUcontroller_4 (vECUcontroller_4.fmu)
+2025-05-18 14:30:42	[Progress]	[MasterSim::composeVariableVector]      	
+2025-05-18 14:30:42	[Progress]	[MasterSim::composeVariableVector]      	Resolving connection graph and building variable mapping
+2025-05-18 14:30:42	[Progress]	[MasterSim::composeVariableVector]      	  1 	'vECUcontroller_1.Out1' -> 'canBusModel.CAN_IN_1'    (String)
+2025-05-18 14:30:42	[Progress]	[MasterSim::composeVariableVector]      	  2 	'canBusModel.CAN_OUT' -> 'vECUcontroller_1.In1'    (String)
+2025-05-18 14:30:42	[Progress]	[MasterSim::composeVariableVector]      	  3 	'vECUcontroller_2.Out1' -> 'canBusModel.CAN_IN_2'    (String)
+2025-05-18 14:30:42	[Progress]	[MasterSim::composeVariableVector]      	  4 	'vECUcontroller_3.Out1' -> 'canBusModel.CAN_IN_3'    (String)
+2025-05-18 14:30:42	[Progress]	[MasterSim::composeVariableVector]      	  5 	'vECUcontroller_4.Out1' -> 'canBusModel.CAN_IN_4'    (String)
+2025-05-18 14:30:42	[Progress]	[MasterSim::composeVariableVector]      	  6 	'canBusModel.CAN_OUT' -> 'vECUcontroller_2.In1'    (String)
+2025-05-18 14:30:42	[Progress]	[MasterSim::composeVariableVector]      	  7 	'canBusModel.CAN_OUT' -> 'vECUcontroller_3.In1'    (String)
+2025-05-18 14:30:42	[Progress]	[MasterSim::composeVariableVector]      	  8 	'canBusModel.CAN_OUT' -> 'vECUcontroller_4.In1'    (String)
+2025-05-18 14:30:42	[Warning ]	[MasterSim::composeVariableVector]      	  No real variables in connection graph. This may be an error since FMUs won't communicate with each other.
+2025-05-18 14:30:42	[Progress]	[MasterSim::setupDefaultParameters]     	
+2025-05-18 14:30:42	[Progress]	[MasterSim::setupDefaultParameters]     	Setting up default parameters
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	Setting up experiment (calling initializeSlave()/setupExperiment() in slaves)
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	Initial conditions (parameters, input values, initial condition iteration)
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	  Setting default start values for input variables/parameters
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'canBusModel'
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   CAN_IN_1=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   CAN_IN_2=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   CAN_IN_3=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   CAN_IN_4=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   CAN_IN_5=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   CAN_IN_6=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   CAN_IN_7=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   CAN_IN_8=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Integer)   CanFDSpeed_bps=5000000
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Integer)   CanSpeed_bps=500000
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Integer)   FixedStep_us=1000
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_1'
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   In1=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Real)   stepSize=0.001
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Integer)   fmuNum=1
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Integer)   portVal=33301
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_2'
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   In1=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Real)   stepSize=0.001
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Integer)   fmuNum=2
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Integer)   portVal=33302
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_3'
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   In1=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Real)   stepSize=0.001
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Integer)   fmuNum=3
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Integer)   portVal=33303
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_4'
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (String)   In1=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Real)   stepSize=0.001
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Integer)   fmuNum=4
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	      (Integer)   portVal=33304
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	  Setting user-defined parameters and start values for input variables.
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'canBusModel'
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_1'
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_2'
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_3'
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_4'
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	  Entering initialization mode (calling enterInitializationMode() in FMI 2 slaves)
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'canBusModel'
+2025-05-18 14:30:42	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_1'
+2025-05-18 14:30:45	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_2'
+2025-05-18 14:30:47	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_3'
+2025-05-18 14:30:49	[Progress]	[MasterSim::initialConditions]          	    Slave 'vECUcontroller_4'
+2025-05-18 14:30:51	[Progress]	[MasterSim::initialConditions]          	  Initial condition iteration (Gauss-Jacobi-Iteration only with get/set functions)
+2025-05-18 14:30:51	[Progress]	[MasterSim::initialConditions]          	  Gauss-Jacobi-Iteration, loop #1.
+2025-05-18 14:30:51	[Progress]	[MasterSim::initialConditions]          	  Gauss-Jacobi-Iteration, loop #2.
+2025-05-18 14:30:51	[Progress]	[MasterSim::initialConditions]          	  Gauss-Jacobi-Iteration, loop #3.
+2025-05-18 14:30:51	[Progress]	[MasterSim::initialConditions]          	  Leaving initialization mode (calling exitInitializationMode() in FMI 2 slaves)
+2025-05-18 14:30:56	[Progress]	[OutputWriter::openOutputFile]          	Creating output file 'strings.csv' with 5 outputs.
+2025-05-18 14:30:56	[Warning ]	[OutputWriter::openOutputFile]          	No output quantities defined in slaves, MasterSim will not generate any results!
+2025-05-18 14:30:56	[Progress]	[OutputWriter::openOutputFile]          	Creating output file 'values.csv'.
+2025-05-18 14:30:56	[Progress]	[SolverFeedback::writeFeedback]         	Simtime     Simdate           Realtime    MeanSpeed    CurrentSpeed ETC
+2025-05-18 14:30:56	[Progress]	[SolverFeedback::writeFeedback]         	     0 ms   01.01.00  0:00:00      0 ms        0 ms/s       0 ms/s  ---
+2025-05-18 14:30:57	[Progress]	[SolverFeedback::writeFeedback]         	     3 ms   01.01.00  0:00:00    753 ms        4 ms/s       4 ms/s  41.794 min
+2025-05-18 14:30:58	[Progress]	[SolverFeedback::writeFeedback]         	     5 ms   01.01.00  0:00:00  1.359 s         4 ms/s       4 ms/s  45.273 min
+2025-05-18 14:30:58	[Progress]	[SolverFeedback::writeFeedback]         	     7 ms   01.01.00  0:00:00  1.942 s         4 ms/s       4 ms/s  46.187 min
+2025-05-18 14:30:59	[Progress]	[SolverFeedback::writeFeedback]         	    10 ms   01.01.00  0:00:00  2.528 s         4 ms/s       4 ms/s  42.086 min
+2025-05-18 14:30:59	[Progress]	[SolverFeedback::writeFeedback]         	    13 ms   01.01.00  0:00:00  3.096 s         4 ms/s       4 ms/s  39.636 min
+2025-05-18 14:31:00	[Progress]	[SolverFeedback::writeFeedback]         	    16 ms   01.01.00  0:00:00  3.667 s         4 ms/s       4 ms/s  38.136 min
+2025-05-18 14:31:00	[Progress]	[SolverFeedback::writeFeedback]         	    19 ms   01.01.00  0:00:00  4.235 s         4 ms/s       4 ms/s  37.076 min
+2025-05-18 14:31:01	[Progress]	[SolverFeedback::writeFeedback]         	    22 ms   01.01.00  0:00:00  4.803 s         5 ms/s       5 ms/s  36.306 min
+2025-05-18 14:31:02	[Progress]	[SolverFeedback::writeFeedback]         	    25 ms   01.01.00  0:00:00  5.375 s         5 ms/s       5 ms/s  35.741 min
+2025-05-18 14:31:02	[Progress]	[SolverFeedback::writeFeedback]         	    28 ms   01.01.00  0:00:00  5.947 s         5 ms/s       5 ms/s  35.297 min
+2025-05-18 14:31:03	[Progress]	[SolverFeedback::writeFeedback]         	    31 ms   01.01.00  0:00:00  6.514 s         5 ms/s       5 ms/s  34.910 min
+2025-05-18 14:31:03	[Progress]	[SolverFeedback::writeFeedback]         	    34 ms   01.01.00  0:00:00  7.083 s         5 ms/s       5 ms/s  34.598 min
+2025-05-18 14:31:04	[Progress]	[SolverFeedback::writeFeedback]         	    37 ms   01.01.00  0:00:00  7.662 s         5 ms/s       5 ms/s  34.386 min
+2025-05-18 14:31:04	[Progress]	[SolverFeedback::writeFeedback]         	Simtime     Simdate           Realtime    MeanSpeed    CurrentSpeed ETC
+2025-05-18 14:31:04	[Progress]	[SolverFeedback::writeFeedback]         	    40 ms   01.01.00  0:00:00  8.230 s         5 ms/s       5 ms/s  34.154 min
+2025-05-18 14:31:05	[Progress]	[SolverFeedback::writeFeedback]         	    43 ms   01.01.00  0:00:00  8.799 s         5 ms/s       5 ms/s  33.956 min
+2025-05-18 14:31:06	[Progress]	[SolverFeedback::writeFeedback]         	    46 ms   01.01.00  0:00:00  9.369 s         5 ms/s       5 ms/s  33.788 min
+2025-05-18 14:31:06	[Progress]	[SolverFeedback::writeFeedback]         	    49 ms   01.01.00  0:00:00  9.940 s         5 ms/s       5 ms/s  33.642 min
+2025-05-18 14:31:07	[Progress]	[SolverFeedback::writeFeedback]         	    52 ms   01.01.00  0:00:00 10.519 s         5 ms/s       5 ms/s  33.538 min
+2025-05-18 14:31:07	[Progress]	[SolverFeedback::writeFeedback]         	    55 ms   01.01.00  0:00:00 11.088 s         5 ms/s       5 ms/s  33.414 min
+2025-05-18 14:31:08	[Progress]	[SolverFeedback::writeFeedback]         	    58 ms   01.01.00  0:00:00 11.660 s         5 ms/s       5 ms/s  33.310 min
+2025-05-18 14:31:08	[Progress]	[SolverFeedback::writeFeedback]         	    61 ms   01.01.00  0:00:00 12.229 s         5 ms/s       5 ms/s  33.209 min
+2025-05-18 14:31:09	[Progress]	[SolverFeedback::writeFeedback]         	    64 ms   01.01.00  0:00:00 12.801 s         5 ms/s       5 ms/s  33.121 min
+2025-05-18 14:31:10	[Progress]	[SolverFeedback::writeFeedback]         	    67 ms   01.01.00  0:00:00 13.371 s         5 ms/s       5 ms/s  33.038 min
+2025-05-18 14:31:10	[Progress]	[SolverFeedback::writeFeedback]         	    70 ms   01.01.00  0:00:00 13.943 s         5 ms/s       5 ms/s  32.965 min
+2025-05-18 14:31:11	[Progress]	[SolverFeedback::writeFeedback]         	    73 ms   01.01.00  0:00:00 14.521 s         5 ms/s       5 ms/s  32.911 min
+2025-05-18 14:31:11	[Progress]	[SolverFeedback::writeFeedback]         	    76 ms   01.01.00  0:00:00 15.101 s         5 ms/s       5 ms/s  32.863 min
+2025-05-18 14:31:12	[Progress]	[SolverFeedback::writeFeedback]         	    79 ms   01.01.00  0:00:00 15.670 s         5 ms/s       5 ms/s  32.798 min
+2025-05-18 14:31:12	[Progress]	[SolverFeedback::writeFeedback]         	    82 ms   01.01.00  0:00:00 16.239 s         5 ms/s       5 ms/s  32.735 min
+2025-05-18 14:31:13	[Progress]	[SolverFeedback::writeFeedback]         	    85 ms   01.01.00  0:00:00 16.787 s         5 ms/s       5 ms/s  32.634 min
+2025-05-18 14:31:14	[Progress]	[SolverFeedback::writeFeedback]         	   114 ms   01.01.00  0:00:00 17.307 s         7 ms/s       7 ms/s  25.014 min
+2025-05-18 14:31:14	[Progress]	[SolverFeedback::writeFeedback]         	   150 ms   01.01.00  0:00:00 17.812 s         8 ms/s       8 ms/s  19.493 min
+2025-05-18 14:31:15	[Progress]	[SolverFeedback::writeFeedback]         	   190 ms   01.01.00  0:00:00 18.313 s        10 ms/s      10 ms/s  15.758 min
+2025-05-18 14:31:15	[Progress]	[SolverFeedback::writeFeedback]         	   226 ms   01.01.00  0:00:00 18.830 s        12 ms/s      12 ms/s  13.572 min
+2025-05-18 14:31:16	[Progress]	[SolverFeedback::writeFeedback]         	   262 ms   01.01.00  0:00:00 19.335 s        14 ms/s      14 ms/s  11.977 min
+2025-05-18 14:31:16	[Progress]	[SolverFeedback::writeFeedback]         	   298 ms   01.01.00  0:00:00 19.849 s        15 ms/s      15 ms/s  10.770 min
+2025-05-18 14:31:17	[Progress]	[SolverFeedback::writeFeedback]         	   334 ms   01.01.00  0:00:00 20.373 s        16 ms/s      16 ms/s   9.827 min
+2025-05-18 14:31:17	[Progress]	[SolverFeedback::writeFeedback]         	   370 ms   01.01.00  0:00:00 20.885 s        18 ms/s      18 ms/s   9.059 min
+2025-05-18 14:31:18	[Progress]	[SolverFeedback::writeFeedback]         	   406 ms   01.01.00  0:00:00 21.403 s        19 ms/s      19 ms/s   8.429 min
+2025-05-18 14:31:18	[Progress]	[SolverFeedback::writeFeedback]         	   439 ms   01.01.00  0:00:00 21.912 s        20 ms/s      20 ms/s   7.953 min
+2025-05-18 14:31:19	[Progress]	[SolverFeedback::writeFeedback]         	   471 ms   01.01.00  0:00:00 22.432 s        21 ms/s      21 ms/s   7.564 min
+2025-05-18 14:31:19	[Progress]	[SolverFeedback::writeFeedback]         	   507 ms   01.01.00  0:00:00 22.940 s        22 ms/s      22 ms/s   7.159 min
+2025-05-18 14:31:20	[Progress]	[SolverFeedback::writeFeedback]         	   542 ms   01.01.00  0:00:00 23.441 s        23 ms/s      23 ms/s   6.817 min
+2025-05-18 14:31:20	[Progress]	[SolverFeedback::writeFeedback]         	   577 ms   01.01.00  0:00:00 23.946 s        24 ms/s      24 ms/s   6.518 min
+2025-05-18 14:31:21	[Progress]	[SolverFeedback::writeFeedback]         	   613 ms   01.01.00  0:00:00 24.447 s        25 ms/s      25 ms/s   6.239 min
+2025-05-18 14:31:21	[Progress]	[SolverFeedback::writeFeedback]         	   647 ms   01.01.00  0:00:00 24.978 s        26 ms/s      26 ms/s   6.018 min
+2025-05-18 14:31:22	[Progress]	[SolverFeedback::writeFeedback]         	   683 ms   01.01.00  0:00:00 25.486 s        27 ms/s      27 ms/s   5.794 min
+2025-05-18 14:31:22	[Progress]	[SolverFeedback::writeFeedback]         	   715 ms   01.01.00  0:00:00 25.989 s        28 ms/s      28 ms/s   5.625 min
+2025-05-18 14:31:23	[Progress]	[SolverFeedback::writeFeedback]         	   753 ms   01.01.00  0:00:00 26.493 s        28 ms/s      28 ms/s   5.422 min
+2025-05-18 14:31:23	[Progress]	[SolverFeedback::writeFeedback]         	   789 ms   01.01.00  0:00:00 27.000 s        29 ms/s      29 ms/s   5.253 min
+2025-05-18 14:31:24	[Progress]	[SolverFeedback::writeFeedback]         	   827 ms   01.01.00  0:00:00 27.503 s        30 ms/s      30 ms/s   5.084 min
+2025-05-18 14:31:24	[Progress]	[SolverFeedback::writeFeedback]         	   865 ms   01.01.00  0:00:00 28.004 s        31 ms/s      31 ms/s   4.929 min
+2025-05-18 14:31:25	[Progress]	[SolverFeedback::writeFeedback]         	   899 ms   01.01.00  0:00:00 28.523 s        32 ms/s      32 ms/s   4.812 min
+2025-05-18 14:31:25	[Progress]	[SolverFeedback::writeFeedback]         	   935 ms   01.01.00  0:00:00 29.024 s        32 ms/s      32 ms/s   4.690 min
+2025-05-18 14:31:26	[Progress]	[SolverFeedback::writeFeedback]         	   968 ms   01.01.00  0:00:00 29.544 s        33 ms/s      33 ms/s   4.594 min
+2025-05-18 14:31:26	[Progress]	[SolverFeedback::writeFeedback]         	 1.006 s    01.01.00  0:00:01 30.052 s        33 ms/s      33 ms/s   4.478 min
+2025-05-18 14:31:27	[Progress]	[SolverFeedback::writeFeedback]         	 1.044 s    01.01.00  0:00:01 30.557 s        34 ms/s      34 ms/s   4.369 min
+2025-05-18 14:31:27	[Progress]	[SolverFeedback::writeFeedback]         	 1.082 s    01.01.00  0:00:01 31.073 s        35 ms/s      35 ms/s   4.268 min
+2025-05-18 14:31:28	[Progress]	[SolverFeedback::writeFeedback]         	 1.120 s    01.01.00  0:00:01 31.585 s        35 ms/s      35 ms/s   4.174 min
+2025-05-18 14:31:28	[Progress]	[SolverFeedback::writeFeedback]         	 1.156 s    01.01.00  0:00:01 32.100 s        36 ms/s      36 ms/s   4.093 min
+2025-05-18 14:31:29	[Progress]	[SolverFeedback::writeFeedback]         	 1.192 s    01.01.00  0:00:01 32.616 s        37 ms/s      37 ms/s   4.017 min
+2025-05-18 14:31:29	[Progress]	[SolverFeedback::writeFeedback]         	 1.229 s    01.01.00  0:00:01 33.120 s        37 ms/s      37 ms/s   3.939 min
+2025-05-18 14:31:30	[Progress]	[SolverFeedback::writeFeedback]         	 1.262 s    01.01.00  0:00:01 33.640 s        38 ms/s      38 ms/s   3.882 min
+2025-05-18 14:31:30	[Progress]	[SolverFeedback::writeFeedback]         	 1.300 s    01.01.00  0:00:01 34.146 s        38 ms/s      38 ms/s   3.808 min
+2025-05-18 14:31:31	[Progress]	[SolverFeedback::writeFeedback]         	 1.338 s    01.01.00  0:00:01 34.660 s        39 ms/s      39 ms/s   3.740 min
+2025-05-18 14:31:31	[Progress]	[SolverFeedback::writeFeedback]         	 1.373 s    01.01.00  0:00:01 35.161 s        39 ms/s      39 ms/s   3.682 min
+2025-05-18 14:31:32	[Progress]	[SolverFeedback::writeFeedback]         	 1.408 s    01.01.00  0:00:01 35.682 s        39 ms/s      39 ms/s   3.629 min
+2025-05-18 14:31:32	[Progress]	[SolverFeedback::writeFeedback]         	 1.448 s    01.01.00  0:00:01 36.188 s        40 ms/s      40 ms/s   3.562 min
+2025-05-18 14:31:33	[Progress]	[SolverFeedback::writeFeedback]         	 1.485 s    01.01.00  0:00:01 36.707 s        40 ms/s      40 ms/s   3.508 min
+2025-05-18 14:31:33	[Progress]	[SolverFeedback::writeFeedback]         	Simtime     Simdate           Realtime    MeanSpeed    CurrentSpeed ETC
+2025-05-18 14:31:33	[Progress]	[SolverFeedback::writeFeedback]         	 1.521 s    01.01.00  0:00:01 37.215 s        41 ms/s      41 ms/s   3.458 min
+2025-05-18 14:31:34	[Progress]	[SolverFeedback::writeFeedback]         	 1.559 s    01.01.00  0:00:01 37.719 s        41 ms/s      41 ms/s   3.404 min
+2025-05-18 14:31:34	[Progress]	[SolverFeedback::writeFeedback]         	 1.598 s    01.01.00  0:00:01 38.232 s        42 ms/s      42 ms/s   3.350 min
+2025-05-18 14:31:35	[Progress]	[SolverFeedback::writeFeedback]         	 1.633 s    01.01.00  0:00:01 38.753 s        42 ms/s      42 ms/s   3.309 min
+2025-05-18 14:31:36	[Progress]	[SolverFeedback::writeFeedback]         	 1.669 s    01.01.00  0:00:01 39.261 s        43 ms/s      43 ms/s   3.266 min
+2025-05-18 14:31:36	[Progress]	[SolverFeedback::writeFeedback]         	 1.704 s    01.01.00  0:00:01 39.761 s        43 ms/s      43 ms/s   3.226 min
+2025-05-18 14:31:37	[Progress]	[SolverFeedback::writeFeedback]         	 1.739 s    01.01.00  0:00:01 40.265 s        43 ms/s      43 ms/s   3.188 min
+2025-05-18 14:31:37	[Progress]	[SolverFeedback::writeFeedback]         	 1.775 s    01.01.00  0:00:01 40.770 s        44 ms/s      44 ms/s   3.149 min
+2025-05-18 14:31:38	[Progress]	[SolverFeedback::writeFeedback]         	 1.811 s    01.01.00  0:00:01 41.276 s        44 ms/s      44 ms/s   3.111 min
+2025-05-18 14:31:38	[Progress]	[SolverFeedback::writeFeedback]         	 1.848 s    01.01.00  0:00:01 41.782 s        44 ms/s      44 ms/s   3.072 min
+2025-05-18 14:31:39	[Progress]	[SolverFeedback::writeFeedback]         	 1.879 s    01.01.00  0:00:01 42.293 s        44 ms/s      44 ms/s   3.046 min
+2025-05-18 14:31:39	[Progress]	[SolverFeedback::writeFeedback]         	 1.915 s    01.01.00  0:00:01 42.796 s        45 ms/s      45 ms/s   3.011 min
+2025-05-18 14:31:40	[Progress]	[SolverFeedback::writeFeedback]         	 1.952 s    01.01.00  0:00:01 43.299 s        45 ms/s      45 ms/s   2.975 min
+2025-05-18 14:31:40	[Progress]	[SolverFeedback::writeFeedback]         	 1.986 s    01.01.00  0:00:01 43.809 s        45 ms/s      45 ms/s   2.946 min
+2025-05-18 14:31:41	[Progress]	[SolverFeedback::writeFeedback]         	 2.022 s    01.01.00  0:00:02 44.329 s        46 ms/s      46 ms/s   2.915 min
+2025-05-18 14:31:41	[Progress]	[SolverFeedback::writeFeedback]         	 2.058 s    01.01.00  0:00:02 44.838 s        46 ms/s      46 ms/s   2.884 min
+2025-05-18 14:31:42	[Progress]	[SolverFeedback::writeFeedback]         	 2.094 s    01.01.00  0:00:02 45.341 s        46 ms/s      46 ms/s   2.853 min
+2025-05-18 14:31:42	[Progress]	[SolverFeedback::writeFeedback]         	 2.130 s    01.01.00  0:00:02 45.842 s        46 ms/s      46 ms/s   2.823 min
+2025-05-18 14:31:43	[Progress]	[SolverFeedback::writeFeedback]         	 2.166 s    01.01.00  0:00:02 46.348 s        47 ms/s      47 ms/s   2.794 min
+2025-05-18 14:31:43	[Progress]	[SolverFeedback::writeFeedback]         	 2.204 s    01.01.00  0:00:02 46.867 s        47 ms/s      47 ms/s   2.763 min
+2025-05-18 14:31:44	[Progress]	[SolverFeedback::writeFeedback]         	 2.240 s    01.01.00  0:00:02 47.368 s        47 ms/s      47 ms/s   2.735 min
+2025-05-18 14:31:44	[Progress]	[SolverFeedback::writeFeedback]         	 2.278 s    01.01.00  0:00:02 47.893 s        48 ms/s      48 ms/s   2.706 min
+2025-05-18 14:31:45	[Progress]	[SolverFeedback::writeFeedback]         	 2.316 s    01.01.00  0:00:02 48.408 s        48 ms/s      48 ms/s   2.677 min
+2025-05-18 14:31:45	[Progress]	[SolverFeedback::writeFeedback]         	 2.354 s    01.01.00  0:00:02 48.928 s        48 ms/s      48 ms/s   2.649 min
+2025-05-18 14:31:46	[Progress]	[SolverFeedback::writeFeedback]         	 2.391 s    01.01.00  0:00:02 49.435 s        48 ms/s      48 ms/s   2.622 min
+2025-05-18 14:31:46	[Progress]	[SolverFeedback::writeFeedback]         	 2.428 s    01.01.00  0:00:02 49.940 s        49 ms/s      49 ms/s   2.596 min
+2025-05-18 14:31:47	[Progress]	[SolverFeedback::writeFeedback]         	 2.465 s    01.01.00  0:00:02 50.452 s        49 ms/s      49 ms/s   2.570 min
+2025-05-18 14:31:47	[Progress]	[SolverFeedback::writeFeedback]         	/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test.msim
+2025-05-18 14:31:47	[Progress]	[SolverFeedback::writeFeedback]         	 2.501 s    01.01.00  0:00:02 50.954 s        49 ms/s      49 ms/s   2.546 min
+2025-05-18 14:31:48	[Progress]	[SolverFeedback::writeFeedback]         	 2.539 s    01.01.00  0:00:02 51.468 s        49 ms/s      49 ms/s   2.521 min
+2025-05-18 14:31:48	[Progress]	[SolverFeedback::writeFeedback]         	 2.574 s    01.01.00  0:00:02 51.973 s        50 ms/s      50 ms/s   2.499 min
+2025-05-18 14:31:49	[Progress]	[SolverFeedback::writeFeedback]         	 2.610 s    01.01.00  0:00:02 52.484 s        50 ms/s      50 ms/s   2.477 min
+2025-05-18 14:31:49	[Progress]	[SolverFeedback::writeFeedback]         	 2.647 s    01.01.00  0:00:02 52.987 s        50 ms/s      50 ms/s   2.453 min
+2025-05-18 14:31:50	[Progress]	[SolverFeedback::writeFeedback]         	 2.685 s    01.01.00  0:00:02 53.509 s        50 ms/s      50 ms/s   2.430 min
+2025-05-18 14:31:50	[Progress]	[SolverFeedback::writeFeedback]         	Simtime     Simdate           Realtime    MeanSpeed    CurrentSpeed ETC
+2025-05-18 14:31:50	[Progress]	[SolverFeedback::writeFeedback]         	 2.721 s    01.01.00  0:00:02 54.022 s        50 ms/s      50 ms/s   2.409 min
+2025-05-18 14:31:51	[Progress]	[SolverFeedback::writeFeedback]         	 2.757 s    01.01.00  0:00:02 54.539 s        51 ms/s      51 ms/s   2.388 min
+2025-05-18 14:31:51	[Progress]	[SolverFeedback::writeFeedback]         	 2.791 s    01.01.00  0:00:02 55.049 s        51 ms/s      51 ms/s   2.370 min
+2025-05-18 14:31:52	[Progress]	[SolverFeedback::writeFeedback]         	 2.829 s    01.01.00  0:00:02 55.567 s        51 ms/s      51 ms/s   2.348 min
+2025-05-18 14:31:52	[Progress]	[SolverFeedback::writeFeedback]         	 2.865 s    01.01.00  0:00:02 56.071 s        51 ms/s      51 ms/s   2.327 min
+2025-05-18 14:31:53	[Progress]	[SolverFeedback::writeFeedback]         	 2.899 s    01.01.00  0:00:02 56.603 s        51 ms/s      51 ms/s   2.311 min
+2025-05-18 14:31:53	[Progress]	[SolverFeedback::writeFeedback]         	 2.936 s    01.01.00  0:00:02 57.105 s        51 ms/s      51 ms/s   2.290 min
+2025-05-18 14:31:54	[Progress]	[SolverFeedback::writeFeedback]         	 2.972 s    01.01.00  0:00:02 57.616 s        52 ms/s      52 ms/s   2.271 min
+2025-05-18 14:31:54	[Progress]	[SolverFeedback::writeFeedback]         	 3.008 s    01.01.00  0:00:03 58.124 s        52 ms/s      52 ms/s   2.252 min
+2025-05-18 14:31:55	[Progress]	[SolverFeedback::writeFeedback]         	 3.046 s    01.01.00  0:00:03 58.634 s        52 ms/s      52 ms/s   2.231 min
+2025-05-18 14:31:55	[Progress]	[SolverFeedback::writeFeedback]         	 3.084 s    01.01.00  0:00:03 59.150 s        52 ms/s      52 ms/s   2.211 min
+2025-05-18 14:31:56	[Progress]	[SolverFeedback::writeFeedback]         	 3.112 s    01.01.00  0:00:03 59.663 s        52 ms/s      52 ms/s   2.201 min
+2025-05-18 14:31:56	[Progress]	[SolverFeedback::writeFeedback]         	 3.150 s    01.01.00  0:00:03  1.003 min      52 ms/s      52 ms/s   2.181 min
+2025-05-18 14:31:57	[Progress]	[SolverFeedback::writeFeedback]         	 3.188 s    01.01.00  0:00:03  1.011 min      53 ms/s      53 ms/s   2.161 min
+2025-05-18 14:31:57	[Progress]	[SolverFeedback::writeFeedback]         	 3.226 s    01.01.00  0:00:03  1.020 min      53 ms/s      53 ms/s   2.142 min
+2025-05-18 14:31:58	[Progress]	[SolverFeedback::writeFeedback]         	 3.262 s    01.01.00  0:00:03  1.029 min      53 ms/s      53 ms/s   2.125 min
+2025-05-18 14:31:58	[Progress]	[SolverFeedback::writeFeedback]         	 3.300 s    01.01.00  0:00:03  1.037 min      53 ms/s      53 ms/s   2.106 min
+2025-05-18 14:31:59	[Progress]	[SolverFeedback::writeFeedback]         	 3.336 s    01.01.00  0:00:03  1.046 min      53 ms/s      53 ms/s   2.089 min
+2025-05-18 14:32:00	[Progress]	[SolverFeedback::writeFeedback]         	 3.372 s    01.01.00  0:00:03  1.054 min      53 ms/s      53 ms/s   2.072 min
+2025-05-18 14:32:00	[Progress]	[SolverFeedback::writeFeedback]         	 3.408 s    01.01.00  0:00:03  1.063 min      53 ms/s      53 ms/s   2.056 min
+2025-05-18 14:32:01	[Progress]	[SolverFeedback::writeFeedback]         	 3.447 s    01.01.00  0:00:03  1.071 min      54 ms/s      54 ms/s   2.037 min
+2025-05-18 14:32:01	[Progress]	[SolverFeedback::writeFeedback]         	 3.485 s    01.01.00  0:00:03  1.080 min      54 ms/s      54 ms/s   2.018 min
+2025-05-18 14:32:02	[Progress]	[SolverFeedback::writeFeedback]         	 3.520 s    01.01.00  0:00:03  1.088 min      54 ms/s      54 ms/s   2.003 min
+2025-05-18 14:32:02	[Progress]	[SolverFeedback::writeFeedback]         	 3.556 s    01.01.00  0:00:03  1.097 min      54 ms/s      54 ms/s   1.987 min
+2025-05-18 14:32:03	[Progress]	[SolverFeedback::writeFeedback]         	 3.591 s    01.01.00  0:00:03  1.105 min      54 ms/s      54 ms/s   1.972 min
+2025-05-18 14:32:03	[Progress]	[SolverFeedback::writeFeedback]         	 3.627 s    01.01.00  0:00:03  1.113 min      54 ms/s      54 ms/s   1.956 min
+2025-05-18 14:32:04	[Progress]	[SolverFeedback::writeFeedback]         	 3.665 s    01.01.00  0:00:03  1.122 min      54 ms/s      54 ms/s   1.939 min
+2025-05-18 14:32:04	[Progress]	[SolverFeedback::writeFeedback]         	 3.702 s    01.01.00  0:00:03  1.130 min      55 ms/s      55 ms/s   1.923 min
+2025-05-18 14:32:05	[Progress]	[SolverFeedback::writeFeedback]         	 3.739 s    01.01.00  0:00:03  1.139 min      55 ms/s      55 ms/s   1.907 min
+2025-05-18 14:32:05	[Progress]	[SolverFeedback::writeFeedback]         	 3.775 s    01.01.00  0:00:03  1.147 min      55 ms/s      55 ms/s   1.892 min
+2025-05-18 14:32:06	[Progress]	[SolverFeedback::writeFeedback]         	 3.811 s    01.01.00  0:00:03  1.156 min      55 ms/s      55 ms/s   1.877 min
+2025-05-18 14:32:06	[Progress]	[SolverFeedback::writeFeedback]         	 3.849 s    01.01.00  0:00:03  1.164 min      55 ms/s      55 ms/s   1.861 min
+2025-05-18 14:32:07	[Progress]	[SolverFeedback::writeFeedback]         	 3.885 s    01.01.00  0:00:03  1.173 min      55 ms/s      55 ms/s   1.846 min
+2025-05-18 14:32:07	[Progress]	[SolverFeedback::writeFeedback]         	 3.923 s    01.01.00  0:00:03  1.181 min      55 ms/s      55 ms/s   1.830 min
+2025-05-18 14:32:08	[Progress]	[SolverFeedback::writeFeedback]         	 3.960 s    01.01.00  0:00:03  1.190 min      55 ms/s      55 ms/s   1.815 min
+2025-05-18 14:32:08	[Progress]	[SolverFeedback::writeFeedback]         	 3.998 s    01.01.00  0:00:03  1.198 min      56 ms/s      56 ms/s   1.799 min
+2025-05-18 14:32:09	[Progress]	[SolverFeedback::writeFeedback]         	 4.034 s    01.01.00  0:00:04  1.207 min      56 ms/s      56 ms/s   1.785 min
+2025-05-18 14:32:09	[Progress]	[SolverFeedback::writeFeedback]         	 4.068 s    01.01.00  0:00:04  1.215 min      56 ms/s      56 ms/s   1.772 min
+2025-05-18 14:32:10	[Progress]	[SolverFeedback::writeFeedback]         	 4.102 s    01.01.00  0:00:04  1.224 min      56 ms/s      56 ms/s   1.760 min
+2025-05-18 14:32:10	[Progress]	[SolverFeedback::writeFeedback]         	 4.136 s    01.01.00  0:00:04  1.233 min      56 ms/s      56 ms/s   1.748 min
+2025-05-18 14:32:11	[Progress]	[SolverFeedback::writeFeedback]         	 4.168 s    01.01.00  0:00:04  1.241 min      56 ms/s      56 ms/s   1.737 min
+2025-05-18 14:32:11	[Progress]	[SolverFeedback::writeFeedback]         	 4.200 s    01.01.00  0:00:04  1.250 min      56 ms/s      56 ms/s   1.726 min
+2025-05-18 14:32:12	[Progress]	[SolverFeedback::writeFeedback]         	 4.236 s    01.01.00  0:00:04  1.258 min      56 ms/s      56 ms/s   1.712 min
+2025-05-18 14:32:12	[Progress]	[SolverFeedback::writeFeedback]         	 4.272 s    01.01.00  0:00:04  1.267 min      56 ms/s      56 ms/s   1.699 min
+2025-05-18 14:32:13	[Progress]	[SolverFeedback::writeFeedback]         	 4.308 s    01.01.00  0:00:04  1.276 min      56 ms/s      56 ms/s   1.685 min
+2025-05-18 14:32:13	[Progress]	[SolverFeedback::writeFeedback]         	 4.347 s    01.01.00  0:00:04  1.284 min      56 ms/s      56 ms/s   1.670 min
+2025-05-18 14:32:14	[Progress]	[SolverFeedback::writeFeedback]         	 4.382 s    01.01.00  0:00:04  1.293 min      57 ms/s      57 ms/s   1.657 min
+2025-05-18 14:32:14	[Progress]	[SolverFeedback::writeFeedback]         	 4.418 s    01.01.00  0:00:04  1.301 min      57 ms/s      57 ms/s   1.644 min
+2025-05-18 14:32:15	[Progress]	[SolverFeedback::writeFeedback]         	 4.457 s    01.01.00  0:00:04  1.309 min      57 ms/s      57 ms/s   1.629 min
+2025-05-18 14:32:15	[Progress]	[SolverFeedback::writeFeedback]         	 4.493 s    01.01.00  0:00:04  1.318 min      57 ms/s      57 ms/s   1.615 min
+2025-05-18 14:32:16	[Progress]	[SolverFeedback::writeFeedback]         	 4.525 s    01.01.00  0:00:04  1.326 min      57 ms/s      57 ms/s   1.605 min
+2025-05-18 14:32:16	[Progress]	[SolverFeedback::writeFeedback]         	 4.563 s    01.01.00  0:00:04  1.335 min      57 ms/s      57 ms/s   1.590 min
+2025-05-18 14:32:17	[Progress]	[SolverFeedback::writeFeedback]         	 4.599 s    01.01.00  0:00:04  1.343 min      57 ms/s      57 ms/s   1.578 min
+2025-05-18 14:32:17	[Progress]	[SolverFeedback::writeFeedback]         	 4.635 s    01.01.00  0:00:04  1.352 min      57 ms/s      57 ms/s   1.565 min
+2025-05-18 14:32:18	[Progress]	[SolverFeedback::writeFeedback]         	 4.670 s    01.01.00  0:00:04  1.360 min      57 ms/s      57 ms/s   1.553 min
+2025-05-18 14:32:18	[Progress]	[SolverFeedback::writeFeedback]         	 4.703 s    01.01.00  0:00:04  1.369 min      57 ms/s      57 ms/s   1.542 min
+2025-05-18 14:32:19	[Progress]	[SolverFeedback::writeFeedback]         	 4.738 s    01.01.00  0:00:04  1.377 min      57 ms/s      57 ms/s   1.530 min
+2025-05-18 14:32:19	[Progress]	[SolverFeedback::writeFeedback]         	 4.775 s    01.01.00  0:00:04  1.386 min      57 ms/s      57 ms/s   1.516 min
+2025-05-18 14:32:20	[Progress]	[SolverFeedback::writeFeedback]         	 4.813 s    01.01.00  0:00:04  1.394 min      58 ms/s      58 ms/s   1.503 min
+2025-05-18 14:32:20	[Progress]	[SolverFeedback::writeFeedback]         	 4.851 s    01.01.00  0:00:04  1.403 min      58 ms/s      58 ms/s   1.489 min
+2025-05-18 14:32:21	[Progress]	[SolverFeedback::writeFeedback]         	 4.886 s    01.01.00  0:00:04  1.411 min      58 ms/s      58 ms/s   1.477 min
+2025-05-18 14:32:21	[Progress]	[SolverFeedback::writeFeedback]         	 4.923 s    01.01.00  0:00:04  1.420 min      58 ms/s      58 ms/s   1.464 min
+2025-05-18 14:32:22	[Progress]	[SolverFeedback::writeFeedback]         	 4.960 s    01.01.00  0:00:04  1.429 min      58 ms/s      58 ms/s   1.452 min
+2025-05-18 14:32:22	[Progress]	[SolverFeedback::writeFeedback]         	 4.994 s    01.01.00  0:00:04  1.437 min      58 ms/s      58 ms/s   1.440 min
+2025-05-18 14:32:23	[Progress]	[SolverFeedback::writeFeedback]         	 5.028 s    01.01.00  0:00:05  1.445 min      58 ms/s      58 ms/s   1.429 min
+2025-05-18 14:32:23	[Progress]	[SolverFeedback::writeFeedback]         	 5.063 s    01.01.00  0:00:05  1.454 min      58 ms/s      58 ms/s   1.418 min
+2025-05-18 14:32:24	[Progress]	[SolverFeedback::writeFeedback]         	 5.094 s    01.01.00  0:00:05  1.462 min      58 ms/s      58 ms/s   1.408 min
+2025-05-18 14:32:25	[Progress]	[SolverFeedback::writeFeedback]         	 5.128 s    01.01.00  0:00:05  1.471 min      58 ms/s      58 ms/s   1.397 min
+2025-05-18 14:32:25	[Progress]	[SolverFeedback::writeFeedback]         	 5.160 s    01.01.00  0:00:05  1.479 min      58 ms/s      58 ms/s   1.387 min
+2025-05-18 14:32:26	[Progress]	[SolverFeedback::writeFeedback]         	 5.194 s    01.01.00  0:00:05  1.488 min      58 ms/s      58 ms/s   1.376 min
+2025-05-18 14:32:26	[Progress]	[SolverFeedback::writeFeedback]         	 5.225 s    01.01.00  0:00:05  1.496 min      58 ms/s      58 ms/s   1.367 min
+2025-05-18 14:32:27	[Progress]	[SolverFeedback::writeFeedback]         	 5.260 s    01.01.00  0:00:05  1.505 min      58 ms/s      58 ms/s   1.356 min
+2025-05-18 14:32:27	[Progress]	[SolverFeedback::writeFeedback]         	 5.296 s    01.01.00  0:00:05  1.513 min      58 ms/s      58 ms/s   1.344 min
+2025-05-18 14:32:28	[Progress]	[SolverFeedback::writeFeedback]         	 5.334 s    01.01.00  0:00:05  1.522 min      58 ms/s      58 ms/s   1.331 min
+2025-05-18 14:32:28	[Progress]	[SolverFeedback::writeFeedback]         	 5.368 s    01.01.00  0:00:05  1.530 min      58 ms/s      58 ms/s   1.320 min
+2025-05-18 14:32:29	[Progress]	[SolverFeedback::writeFeedback]         	 5.404 s    01.01.00  0:00:05  1.539 min      59 ms/s      59 ms/s   1.309 min
+2025-05-18 14:32:29	[Progress]	[SolverFeedback::writeFeedback]         	 5.439 s    01.01.00  0:00:05  1.547 min      59 ms/s      59 ms/s   1.297 min
+2025-05-18 14:32:30	[Progress]	[SolverFeedback::writeFeedback]         	 5.469 s    01.01.00  0:00:05  1.556 min      59 ms/s      59 ms/s   1.289 min
+2025-05-18 14:32:30	[Progress]	[SolverFeedback::writeFeedback]         	/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test.msim
+2025-05-18 14:32:30	[Progress]	[SolverFeedback::writeFeedback]         	 5.501 s    01.01.00  0:00:05  1.564 min      59 ms/s      59 ms/s   1.279 min
+2025-05-18 14:32:31	[Progress]	[SolverFeedback::writeFeedback]         	 5.531 s    01.01.00  0:00:05  1.573 min      59 ms/s      59 ms/s   1.271 min
+2025-05-18 14:32:31	[Progress]	[SolverFeedback::writeFeedback]         	 5.569 s    01.01.00  0:00:05  1.581 min      59 ms/s      59 ms/s   1.258 min
+2025-05-18 14:32:32	[Progress]	[SolverFeedback::writeFeedback]         	 5.600 s    01.01.00  0:00:05  1.589 min      59 ms/s      59 ms/s   1.249 min
+2025-05-18 14:32:32	[Progress]	[SolverFeedback::writeFeedback]         	 5.636 s    01.01.00  0:00:05  1.598 min      59 ms/s      59 ms/s   1.237 min
+2025-05-18 14:32:33	[Progress]	[SolverFeedback::writeFeedback]         	 5.671 s    01.01.00  0:00:05  1.606 min      59 ms/s      59 ms/s   1.226 min
+2025-05-18 14:32:33	[Progress]	[SolverFeedback::writeFeedback]         	 5.705 s    01.01.00  0:00:05  1.615 min      59 ms/s      59 ms/s   1.216 min
+2025-05-18 14:32:34	[Progress]	[SolverFeedback::writeFeedback]         	/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test.msim
+2025-05-18 14:32:34	[Progress]	[SolverFeedback::writeFeedback]         	 5.741 s    01.01.00  0:00:05  1.623 min      59 ms/s      59 ms/s   1.204 min
+2025-05-18 14:32:34	[Progress]	[SolverFeedback::writeFeedback]         	 5.779 s    01.01.00  0:00:05  1.632 min      59 ms/s      59 ms/s   1.192 min
+2025-05-18 14:32:35	[Progress]	[SolverFeedback::writeFeedback]         	 5.815 s    01.01.00  0:00:05  1.640 min      59 ms/s      59 ms/s   1.180 min
+2025-05-18 14:32:35	[Progress]	[SolverFeedback::writeFeedback]         	 5.851 s    01.01.00  0:00:05  1.649 min      59 ms/s      59 ms/s   1.169 min
+2025-05-18 14:32:36	[Progress]	[SolverFeedback::writeFeedback]         	 5.889 s    01.01.00  0:00:05  1.657 min      59 ms/s      59 ms/s   1.157 min
+2025-05-18 14:32:36	[Progress]	[SolverFeedback::writeFeedback]         	 5.927 s    01.01.00  0:00:05  1.666 min      59 ms/s      59 ms/s   1.145 min
+2025-05-18 14:32:37	[Progress]	[SolverFeedback::writeFeedback]         	 5.962 s    01.01.00  0:00:05  1.674 min      59 ms/s      59 ms/s   1.134 min
+2025-05-18 14:32:37	[Progress]	[SolverFeedback::writeFeedback]         	 5.998 s    01.01.00  0:00:05  1.682 min      59 ms/s      59 ms/s   1.123 min
+2025-05-18 14:32:38	[Progress]	[SolverFeedback::writeFeedback]         	 6.034 s    01.01.00  0:00:06  1.691 min      59 ms/s      59 ms/s   1.111 min
+2025-05-18 14:32:38	[Progress]	[SolverFeedback::writeFeedback]         	 6.070 s    01.01.00  0:00:06  1.699 min      60 ms/s      60 ms/s   1.100 min
+2025-05-18 14:32:39	[Progress]	[SolverFeedback::writeFeedback]         	 6.106 s    01.01.00  0:00:06  1.708 min      60 ms/s      60 ms/s   1.089 min
+2025-05-18 14:32:39	[Progress]	[SolverFeedback::writeFeedback]         	 6.142 s    01.01.00  0:00:06  1.716 min      60 ms/s      60 ms/s   1.078 min
+2025-05-18 14:32:40	[Progress]	[SolverFeedback::writeFeedback]         	 6.176 s    01.01.00  0:00:06  1.725 min      60 ms/s      60 ms/s   1.068 min
+2025-05-18 14:32:40	[Progress]	[SolverFeedback::writeFeedback]         	 6.210 s    01.01.00  0:00:06  1.734 min      60 ms/s      60 ms/s   1.058 min
+2025-05-18 14:32:41	[Progress]	[SolverFeedback::writeFeedback]         	Simtime     Simdate           Realtime    MeanSpeed    CurrentSpeed ETC
+2025-05-18 14:32:41	[Progress]	[SolverFeedback::writeFeedback]         	 6.241 s    01.01.00  0:00:06  1.742 min      60 ms/s      60 ms/s   1.049 min
+2025-05-18 14:32:41	[Progress]	[SolverFeedback::writeFeedback]         	 6.274 s    01.01.00  0:00:06  1.751 min      60 ms/s      60 ms/s   1.040 min
+2025-05-18 14:32:42	[Progress]	[SolverFeedback::writeFeedback]         	 6.306 s    01.01.00  0:00:06  1.759 min      60 ms/s      60 ms/s   1.031 min
+2025-05-18 14:32:42	[Progress]	[SolverFeedback::writeFeedback]         	 6.338 s    01.01.00  0:00:06  1.768 min      60 ms/s      60 ms/s   1.021 min
+2025-05-18 14:32:43	[Progress]	[SolverFeedback::writeFeedback]         	 6.371 s    01.01.00  0:00:06  1.776 min      60 ms/s      60 ms/s   1.012 min
+2025-05-18 14:32:43	[Progress]	[SolverFeedback::writeFeedback]         	 6.404 s    01.01.00  0:00:06  1.785 min      60 ms/s      60 ms/s   1.002 min
+2025-05-18 14:32:44	[Progress]	[SolverFeedback::writeFeedback]         	Simtime     Simdate           Realtime    MeanSpeed    CurrentSpeed ETC
+2025-05-18 14:32:44	[Progress]	[SolverFeedback::writeFeedback]         	 6.441 s    01.01.00  0:00:06  1.793 min      60 ms/s      60 ms/s  59.458 s
+2025-05-18 14:32:44	[Progress]	[SolverFeedback::writeFeedback]         	 6.477 s    01.01.00  0:00:06  1.802 min      60 ms/s      60 ms/s  58.810 s
+2025-05-18 14:32:45	[Progress]	[SolverFeedback::writeFeedback]         	 6.510 s    01.01.00  0:00:06  1.810 min      60 ms/s      60 ms/s  58.233 s
+2025-05-18 14:32:45	[Progress]	[SolverFeedback::writeFeedback]         	 6.543 s    01.01.00  0:00:06  1.819 min      60 ms/s      60 ms/s  57.662 s
+2025-05-18 14:32:46	[Progress]	[SolverFeedback::writeFeedback]         	 6.578 s    01.01.00  0:00:06  1.827 min      60 ms/s      60 ms/s  57.035 s
+2025-05-18 14:32:46	[Progress]	[SolverFeedback::writeFeedback]         	 6.613 s    01.01.00  0:00:06  1.836 min      60 ms/s      60 ms/s  56.419 s
+2025-05-18 14:32:47	[Progress]	[SolverFeedback::writeFeedback]         	 6.649 s    01.01.00  0:00:06  1.844 min      60 ms/s      60 ms/s  55.773 s
+2025-05-18 14:32:47	[Progress]	[SolverFeedback::writeFeedback]         	 6.683 s    01.01.00  0:00:06  1.853 min      60 ms/s      60 ms/s  55.178 s
+2025-05-18 14:32:48	[Progress]	[SolverFeedback::writeFeedback]         	Simtime     Simdate           Realtime    MeanSpeed    CurrentSpeed ETC
+2025-05-18 14:32:48	[Progress]	[SolverFeedback::writeFeedback]         	 6.721 s    01.01.00  0:00:06  1.861 min      60 ms/s      60 ms/s  54.488 s
+2025-05-18 14:32:48	[Progress]	[SolverFeedback::writeFeedback]         	 6.759 s    01.01.00  0:00:06  1.870 min      60 ms/s      60 ms/s  53.800 s
+2025-05-18 14:32:49	[Progress]	[SolverFeedback::writeFeedback]         	 6.797 s    01.01.00  0:00:06  1.878 min      60 ms/s      60 ms/s  53.107 s
+2025-05-18 14:32:49	[Progress]	[SolverFeedback::writeFeedback]         	 6.829 s    01.01.00  0:00:06  1.887 min      60 ms/s      60 ms/s  52.568 s
+2025-05-18 14:32:50	[Progress]	[SolverFeedback::writeFeedback]         	 6.867 s    01.01.00  0:00:06  1.896 min      60 ms/s      60 ms/s  51.891 s
+2025-05-18 14:32:50	[Progress]	[SolverFeedback::writeFeedback]         	/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test.msim
+2025-05-18 14:32:50	[Progress]	[SolverFeedback::writeFeedback]         	 6.901 s    01.01.00  0:00:06  1.904 min      60 ms/s      60 ms/s  51.301 s
+2025-05-18 14:32:51	[Progress]	[SolverFeedback::writeFeedback]         	 6.936 s    01.01.00  0:00:06  1.913 min      60 ms/s      60 ms/s  50.691 s
+2025-05-18 14:32:52	[Progress]	[SolverFeedback::writeFeedback]         	 6.974 s    01.01.00  0:00:06  1.921 min      61 ms/s      61 ms/s  50.014 s
+2025-05-18 14:32:52	[Progress]	[SolverFeedback::writeFeedback]         	 7.010 s    01.01.00  0:00:07  1.930 min      61 ms/s      61 ms/s  49.380 s
+2025-05-18 14:32:53	[Progress]	[SolverFeedback::writeFeedback]         	 7.048 s    01.01.00  0:00:07  1.938 min      61 ms/s      61 ms/s  48.707 s
+2025-05-18 14:32:53	[Progress]	[SolverFeedback::writeFeedback]         	 7.086 s    01.01.00  0:00:07  1.947 min      61 ms/s      61 ms/s  48.035 s
+2025-05-18 14:32:54	[Progress]	[SolverFeedback::writeFeedback]         	 7.118 s    01.01.00  0:00:07  1.955 min      61 ms/s      61 ms/s  47.501 s
+2025-05-18 14:32:54	[Progress]	[SolverFeedback::writeFeedback]         	 7.154 s    01.01.00  0:00:07  1.964 min      61 ms/s      61 ms/s  46.875 s
+2025-05-18 14:32:55	[Progress]	[SolverFeedback::writeFeedback]         	 7.187 s    01.01.00  0:00:07  1.972 min      61 ms/s      61 ms/s  46.318 s
+2025-05-18 14:32:55	[Progress]	[SolverFeedback::writeFeedback]         	 7.222 s    01.01.00  0:00:07  1.981 min      61 ms/s      61 ms/s  45.718 s
+2025-05-18 14:32:56	[Progress]	[SolverFeedback::writeFeedback]         	 7.258 s    01.01.00  0:00:07  1.989 min      61 ms/s      61 ms/s  45.095 s
+2025-05-18 14:32:56	[Progress]	[SolverFeedback::writeFeedback]         	 7.292 s    01.01.00  0:00:07  1.998 min      61 ms/s      61 ms/s  44.515 s
+2025-05-18 14:32:57	[Progress]	[SolverFeedback::writeFeedback]         	 7.328 s    01.01.00  0:00:07  2.006 min      61 ms/s      61 ms/s  43.895 s
+2025-05-18 14:32:57	[Progress]	[SolverFeedback::writeFeedback]         	 7.364 s    01.01.00  0:00:07  2.015 min      61 ms/s      61 ms/s  43.277 s
+2025-05-18 14:32:58	[Progress]	[SolverFeedback::writeFeedback]         	 7.400 s    01.01.00  0:00:07  2.023 min      61 ms/s      61 ms/s  42.654 s
+2025-05-18 14:32:58	[Progress]	[SolverFeedback::writeFeedback]         	 7.435 s    01.01.00  0:00:07  2.032 min      61 ms/s      61 ms/s  42.055 s
+2025-05-18 14:32:59	[Progress]	[SolverFeedback::writeFeedback]         	 7.467 s    01.01.00  0:00:07  2.040 min      61 ms/s      61 ms/s  41.522 s
+2025-05-18 14:32:59	[Progress]	[SolverFeedback::writeFeedback]         	 7.503 s    01.01.00  0:00:07  2.049 min      61 ms/s      61 ms/s  40.906 s
+2025-05-18 14:33:00	[Progress]	[SolverFeedback::writeFeedback]         	/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test.msim
+2025-05-18 14:33:00	[Progress]	[SolverFeedback::writeFeedback]         	 7.541 s    01.01.00  0:00:07  2.057 min      61 ms/s      61 ms/s  40.251 s
+2025-05-18 14:33:00	[Progress]	[SolverFeedback::writeFeedback]         	 7.577 s    01.01.00  0:00:07  2.066 min      61 ms/s      61 ms/s  39.636 s
+2025-05-18 14:33:01	[Progress]	[SolverFeedback::writeFeedback]         	 7.614 s    01.01.00  0:00:07  2.074 min      61 ms/s      61 ms/s  39.001 s
+2025-05-18 14:33:01	[Progress]	[SolverFeedback::writeFeedback]         	 7.652 s    01.01.00  0:00:07  2.083 min      61 ms/s      61 ms/s  38.343 s
+2025-05-18 14:33:02	[Progress]	[SolverFeedback::writeFeedback]         	 7.689 s    01.01.00  0:00:07  2.091 min      61 ms/s      61 ms/s  37.713 s
+2025-05-18 14:33:02	[Progress]	[SolverFeedback::writeFeedback]         	 7.727 s    01.01.00  0:00:07  2.100 min      61 ms/s      61 ms/s  37.059 s
+2025-05-18 14:33:03	[Progress]	[SolverFeedback::writeFeedback]         	 7.759 s    01.01.00  0:00:07  2.108 min      61 ms/s      61 ms/s  36.532 s
+2025-05-18 14:33:03	[Progress]	[SolverFeedback::writeFeedback]         	 7.787 s    01.01.00  0:00:07  2.117 min      61 ms/s      61 ms/s  36.090 s
+2025-05-18 14:33:04	[Progress]	[SolverFeedback::writeFeedback]         	 7.823 s    01.01.00  0:00:07  2.125 min      61 ms/s      61 ms/s  35.481 s
+2025-05-18 14:33:04	[Progress]	[SolverFeedback::writeFeedback]         	 7.859 s    01.01.00  0:00:07  2.133 min      61 ms/s      61 ms/s  34.871 s
+2025-05-18 14:33:05	[Progress]	[SolverFeedback::writeFeedback]         	 7.893 s    01.01.00  0:00:07  2.142 min      61 ms/s      61 ms/s  34.306 s
+2025-05-18 14:33:05	[Progress]	[SolverFeedback::writeFeedback]         	 7.929 s    01.01.00  0:00:07  2.150 min      61 ms/s      61 ms/s  33.700 s
+2025-05-18 14:33:06	[Progress]	[SolverFeedback::writeFeedback]         	 7.966 s    01.01.00  0:00:07  2.159 min      61 ms/s      61 ms/s  33.075 s
+2025-05-18 14:33:06	[Progress]	[SolverFeedback::writeFeedback]         	 8.002 s    01.01.00  0:00:08  2.167 min      62 ms/s      62 ms/s  32.471 s
+2025-05-18 14:33:07	[Progress]	[SolverFeedback::writeFeedback]         	 8.038 s    01.01.00  0:00:08  2.176 min      62 ms/s      62 ms/s  31.866 s
+2025-05-18 14:33:07	[Progress]	[SolverFeedback::writeFeedback]         	 8.072 s    01.01.00  0:00:08  2.184 min      62 ms/s      62 ms/s  31.305 s
+2025-05-18 14:33:08	[Progress]	[SolverFeedback::writeFeedback]         	 8.106 s    01.01.00  0:00:08  2.193 min      62 ms/s      62 ms/s  30.742 s
+2025-05-18 14:33:08	[Progress]	[SolverFeedback::writeFeedback]         	 8.144 s    01.01.00  0:00:08  2.202 min      62 ms/s      62 ms/s  30.103 s
+2025-05-18 14:33:09	[Progress]	[SolverFeedback::writeFeedback]         	 8.178 s    01.01.00  0:00:08  2.210 min      62 ms/s      62 ms/s  29.543 s
+2025-05-18 14:33:09	[Progress]	[SolverFeedback::writeFeedback]         	 8.216 s    01.01.00  0:00:08  2.219 min      62 ms/s      62 ms/s  28.905 s
+2025-05-18 14:33:10	[Progress]	[SolverFeedback::writeFeedback]         	 8.250 s    01.01.00  0:00:08  2.227 min      62 ms/s      62 ms/s  28.344 s
+2025-05-18 14:33:10	[Progress]	[SolverFeedback::writeFeedback]         	 8.284 s    01.01.00  0:00:08  2.235 min      62 ms/s      62 ms/s  27.783 s
+2025-05-18 14:33:11	[Progress]	[SolverFeedback::writeFeedback]         	 8.320 s    01.01.00  0:00:08  2.244 min      62 ms/s      62 ms/s  27.186 s
+2025-05-18 14:33:11	[Progress]	[SolverFeedback::writeFeedback]         	 8.358 s    01.01.00  0:00:08  2.252 min      62 ms/s      62 ms/s  26.549 s
+2025-05-18 14:33:12	[Progress]	[SolverFeedback::writeFeedback]         	 8.394 s    01.01.00  0:00:08  2.261 min      62 ms/s      62 ms/s  25.952 s
+2025-05-18 14:33:12	[Progress]	[SolverFeedback::writeFeedback]         	 8.430 s    01.01.00  0:00:08  2.270 min      62 ms/s      62 ms/s  25.361 s
+2025-05-18 14:33:13	[Progress]	[SolverFeedback::writeFeedback]         	 8.465 s    01.01.00  0:00:08  2.278 min      62 ms/s      62 ms/s  24.788 s
+2025-05-18 14:33:13	[Progress]	[SolverFeedback::writeFeedback]         	 8.502 s    01.01.00  0:00:08  2.287 min      62 ms/s      62 ms/s  24.173 s
+2025-05-18 14:33:14	[Progress]	[SolverFeedback::writeFeedback]         	 8.537 s    01.01.00  0:00:08  2.295 min      62 ms/s      62 ms/s  23.599 s
+2025-05-18 14:33:14	[Progress]	[SolverFeedback::writeFeedback]         	 8.573 s    01.01.00  0:00:08  2.304 min      62 ms/s      62 ms/s  23.009 s
+2025-05-18 14:33:15	[Progress]	[SolverFeedback::writeFeedback]         	 8.609 s    01.01.00  0:00:08  2.313 min      62 ms/s      62 ms/s  22.419 s
+2025-05-18 14:33:16	[Progress]	[SolverFeedback::writeFeedback]         	 8.647 s    01.01.00  0:00:08  2.321 min      62 ms/s      62 ms/s  21.791 s
+2025-05-18 14:33:16	[Progress]	[SolverFeedback::writeFeedback]         	 8.685 s    01.01.00  0:00:08  2.330 min      62 ms/s      62 ms/s  21.165 s
+2025-05-18 14:33:17	[Progress]	[SolverFeedback::writeFeedback]         	 8.722 s    01.01.00  0:00:08  2.338 min      62 ms/s      62 ms/s  20.556 s
+2025-05-18 14:33:17	[Progress]	[SolverFeedback::writeFeedback]         	 8.759 s    01.01.00  0:00:08  2.347 min      62 ms/s      62 ms/s  19.950 s
+2025-05-18 14:33:18	[Progress]	[SolverFeedback::writeFeedback]         	 8.796 s    01.01.00  0:00:08  2.355 min      62 ms/s      62 ms/s  19.343 s
+2025-05-18 14:33:18	[Progress]	[SolverFeedback::writeFeedback]         	 8.831 s    01.01.00  0:00:08  2.364 min      62 ms/s      62 ms/s  18.774 s
+2025-05-18 14:33:19	[Progress]	[SolverFeedback::writeFeedback]         	 8.867 s    01.01.00  0:00:08  2.373 min      62 ms/s      62 ms/s  18.189 s
+2025-05-18 14:33:19	[Progress]	[SolverFeedback::writeFeedback]         	/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test.msim
+2025-05-18 14:33:19	[Progress]	[SolverFeedback::writeFeedback]         	 8.901 s    01.01.00  0:00:08  2.381 min      62 ms/s      62 ms/s  17.639 s
+2025-05-18 14:33:20	[Progress]	[SolverFeedback::writeFeedback]         	 8.937 s    01.01.00  0:00:08  2.389 min      62 ms/s      62 ms/s  17.052 s
+2025-05-18 14:33:20	[Progress]	[SolverFeedback::writeFeedback]         	 8.970 s    01.01.00  0:00:08  2.398 min      62 ms/s      62 ms/s  16.521 s
+2025-05-18 14:33:21	[Progress]	[SolverFeedback::writeFeedback]         	 9.004 s    01.01.00  0:00:09  2.406 min      62 ms/s      62 ms/s  15.971 s
+2025-05-18 14:33:21	[Progress]	[SolverFeedback::writeFeedback]         	 9.038 s    01.01.00  0:00:09  2.415 min      62 ms/s      62 ms/s  15.422 s
+2025-05-18 14:33:22	[Progress]	[SolverFeedback::writeFeedback]         	 9.074 s    01.01.00  0:00:09  2.423 min      62 ms/s      62 ms/s  14.838 s
+2025-05-18 14:33:22	[Progress]	[SolverFeedback::writeFeedback]         	 9.108 s    01.01.00  0:00:09  2.432 min      62 ms/s      62 ms/s  14.290 s
+2025-05-18 14:33:23	[Progress]	[SolverFeedback::writeFeedback]         	 9.145 s    01.01.00  0:00:09  2.440 min      62 ms/s      62 ms/s  13.689 s
+2025-05-18 14:33:23	[Progress]	[SolverFeedback::writeFeedback]         	 9.180 s    01.01.00  0:00:09  2.449 min      62 ms/s      62 ms/s  13.124 s
+2025-05-18 14:33:24	[Progress]	[SolverFeedback::writeFeedback]         	 9.213 s    01.01.00  0:00:09  2.457 min      62 ms/s      62 ms/s  12.594 s
+2025-05-18 14:33:24	[Progress]	[SolverFeedback::writeFeedback]         	 9.245 s    01.01.00  0:00:09  2.466 min      62 ms/s      62 ms/s  12.081 s
+2025-05-18 14:33:25	[Progress]	[SolverFeedback::writeFeedback]         	 9.280 s    01.01.00  0:00:09  2.474 min      63 ms/s      63 ms/s  11.517 s
+2025-05-18 14:33:25	[Progress]	[SolverFeedback::writeFeedback]         	 9.318 s    01.01.00  0:00:09  2.483 min      63 ms/s      63 ms/s  10.902 s
+2025-05-18 14:33:26	[Progress]	[SolverFeedback::writeFeedback]         	 9.352 s    01.01.00  0:00:09  2.491 min      63 ms/s      63 ms/s  10.356 s
+2025-05-18 14:33:26	[Progress]	[SolverFeedback::writeFeedback]         	 9.389 s    01.01.00  0:00:09  2.499 min      63 ms/s      63 ms/s   9.759 s
+2025-05-18 14:33:27	[Progress]	[SolverFeedback::writeFeedback]         	 9.423 s    01.01.00  0:00:09  2.508 min      63 ms/s      63 ms/s   9.213 s
+2025-05-18 14:33:27	[Progress]	[SolverFeedback::writeFeedback]         	 9.462 s    01.01.00  0:00:09  2.516 min      63 ms/s      63 ms/s   8.584 s
+2025-05-18 14:33:28	[Progress]	[SolverFeedback::writeFeedback]         	 9.499 s    01.01.00  0:00:09  2.525 min      63 ms/s      63 ms/s   7.989 s
+2025-05-18 14:33:28	[Progress]	[SolverFeedback::writeFeedback]         	 9.534 s    01.01.00  0:00:09  2.533 min      63 ms/s      63 ms/s   7.429 s
+2025-05-18 14:33:29	[Progress]	[SolverFeedback::writeFeedback]         	 9.569 s    01.01.00  0:00:09  2.541 min      63 ms/s      63 ms/s   6.868 s
+2025-05-18 14:33:29	[Progress]	[SolverFeedback::writeFeedback]         	 9.605 s    01.01.00  0:00:09  2.550 min      63 ms/s      63 ms/s   6.292 s
+2025-05-18 14:33:30	[Progress]	[SolverFeedback::writeFeedback]         	 9.643 s    01.01.00  0:00:09  2.558 min      63 ms/s      63 ms/s   5.682 s
+2025-05-18 14:33:30	[Progress]	[SolverFeedback::writeFeedback]         	Simtime     Simdate           Realtime    MeanSpeed    CurrentSpeed ETC
+2025-05-18 14:33:30	[Progress]	[SolverFeedback::writeFeedback]         	 9.681 s    01.01.00  0:00:09  2.567 min      63 ms/s      63 ms/s   5.074 s
+2025-05-18 14:33:31	[Progress]	[SolverFeedback::writeFeedback]         	 9.719 s    01.01.00  0:00:09  2.575 min      63 ms/s      63 ms/s   4.467 s
+2025-05-18 14:33:31	[Progress]	[SolverFeedback::writeFeedback]         	 9.755 s    01.01.00  0:00:09  2.583 min      63 ms/s      63 ms/s   3.893 s
+2025-05-18 14:33:32	[Progress]	[SolverFeedback::writeFeedback]         	 9.791 s    01.01.00  0:00:09  2.592 min      63 ms/s      63 ms/s   3.320 s
+2025-05-18 14:33:32	[Progress]	[SolverFeedback::writeFeedback]         	 9.826 s    01.01.00  0:00:09  2.600 min      63 ms/s      63 ms/s   2.763 s
+2025-05-18 14:33:33	[Progress]	[SolverFeedback::writeFeedback]         	/home/hrkim/project/1_renodeVECU/renode/hrkim/Level4-vECU/fmi/msim/EXP2_tmp/test.msim
+2025-05-18 14:33:33	[Progress]	[SolverFeedback::writeFeedback]         	 9.862 s    01.01.00  0:00:09  2.609 min      63 ms/s      63 ms/s   2.190 s
+2025-05-18 14:33:33	[Progress]	[SolverFeedback::writeFeedback]         	 9.899 s    01.01.00  0:00:09  2.617 min      63 ms/s      63 ms/s   1.602 s
+2025-05-18 14:33:34	[Progress]	[SolverFeedback::writeFeedback]         	 9.937 s    01.01.00  0:00:09  2.626 min      63 ms/s      63 ms/s     999 ms
+2025-05-18 14:33:34	[Progress]	[SolverFeedback::writeFeedback]         	 9.973 s    01.01.00  0:00:09  2.634 min      63 ms/s      63 ms/s     428 ms
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	Solver statistics
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	------------------------------------------------------------------------------
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	Wall clock time                            =  158.440 s   
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	------------------------------------------------------------------------------
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	Output writing                             =    0.414 s   
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	Master-Algorithm                           =  158.021 s        10000
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	Convergence failures                       =                       0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	Convergence iteration limit exceeded       =                       0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	Error test time and failure count          =    0.000 s            0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	------------------------------------------------------------------------------
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	canBusModel                         doStep =    0.052 s        10000
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	                                  getState =    0.000 s            0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	                                  setState =    0.000 s            0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	vECUcontroller_1                    doStep =   40.461 s        10000
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	                                  getState =    0.000 s            0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	                                  setState =    0.000 s            0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	vECUcontroller_2                    doStep =   39.633 s        10000
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	                                  getState =    0.000 s            0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	                                  setState =    0.000 s            0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	vECUcontroller_3                    doStep =   38.332 s        10000
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	                                  getState =    0.000 s            0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	                                  setState =    0.000 s            0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	vECUcontroller_4                    doStep =   39.493 s        10000
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	                                  getState =    0.000 s            0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	                                  setState =    0.000 s            0
+2025-05-18 14:33:35	[Progress]	[MasterSim::writeMetrics]               	------------------------------------------------------------------------------
