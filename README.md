@@ -227,7 +227,7 @@ When adding new features:
 
 ## License
 
-This project is developed for research purposes at KETI (Korea Electronics Technology Institute).
+MIT
 
 ## References
 
@@ -235,7 +235,11 @@ This project is developed for research purposes at KETI (Korea Electronics Techn
 - [FMI Standard](https://fmi-standard.org/)
 - [S32K1xx Reference Manual](https://www.nxp.com/docs/en/reference-manual/S32K1XXRM.pdf)
 
+### Related Publications
+
+- Kim, H.; et al. (2024). "Virtual ECU Acceleration Framework Using Multi-Core Architecture for Electronic Controller Development." *Electronics*, 13(18), 3704. https://doi.org/10.3390/electronics13183704
+- Kim, H.; et al. (2025). "Framework for Rapid and Cost-Effective Development of Automotive Electronic Controllers." *Electronics*, 14(8), 1690. https://doi.org/10.3390/electronics14081690
+
 ## Authors
 
-- Hyeongrae Kim (hn02301@gmail.com)
-- KETI Level4 Autonomous Driving Team
+- Hyeongrae Kim (hn02301@gmail.com, hrsin09@keti.re.kr)
