@@ -7,6 +7,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
 using Antmicro.Renode.Core;
 using Antmicro.Renode.Core.CAN;
 using Antmicro.Renode.Core.Extensions;
@@ -15,7 +16,9 @@ using Antmicro.Renode.Exceptions;
 using Antmicro.Renode.Logging;
 using Antmicro.Renode.Peripherals.Bus;
 using Antmicro.Renode.Peripherals.Memory;
+#pragma warning disable IDE0005
 using Antmicro.Renode.Utilities;
+#pragma warning restore IDE0005
 
 using Range = Antmicro.Renode.Core.Range;
 
@@ -41,7 +44,7 @@ namespace Antmicro.Renode.Peripherals.CAN
 
             // messageBufferRange = new Range((ulong)Registers.MessageBuffer, numberOfMessageBuffers * 8);
             messageBufferRange = new Range((ulong)Registers.MessageBuffer, numberOfMessageBuffers * 16);
-            messageBuffers = new ArrayMemory((int)messageBufferRange.Size);
+            messageBuffers = new ArrayMemory(messageBufferRange.Size);
             messageBufferInterruptEnable = new IFlagRegisterField[numberOfMessageBuffers];
             messageBufferInterrupt = new IFlagRegisterField[numberOfMessageBuffers];
             messageBufferSize = new IEnumRegisterField<MessageBufferSize>[MessageBufferRegionsCount];

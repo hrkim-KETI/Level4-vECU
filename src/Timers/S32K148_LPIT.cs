@@ -15,7 +15,7 @@ namespace Antmicro.Renode.Peripherals.Timers
 {
     public class S32K148_LPIT : BasicDoubleWordPeripheral, IKnownSize, IGPIOReceiver
     {
-        public S32K148_LPIT(IMachine machine, long frequency) : base(machine)
+        public S32K148_LPIT(IMachine machine, ulong frequency) : base(machine)
         {
             IRQ = new GPIO();
             TimerOutput0 = new GPIO();
@@ -227,7 +227,7 @@ namespace Antmicro.Renode.Peripherals.Timers
 
         private class LPITTimer : LimitTimer
         {
-            public LPITTimer(IClockSource clockSource, long frequency, S32K148_LPIT owner, string name) : base(clockSource, frequency, owner, name,
+            public LPITTimer(IClockSource clockSource, ulong frequency, S32K148_LPIT owner, string name) : base(clockSource, frequency, owner, name,
                     limit: uint.MaxValue, direction: Direction.Descending, enabled: false, workMode: WorkMode.Periodic, eventEnabled: false, autoUpdate: true)
             {
                 lpit = owner;

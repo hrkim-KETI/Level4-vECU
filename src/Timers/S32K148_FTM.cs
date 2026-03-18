@@ -16,7 +16,7 @@ namespace Antmicro.Renode.Peripherals.Timers
 {
     public class S32K148_FTM : BasicDoubleWordPeripheral, IKnownSize
     {
-        public S32K148_FTM(IMachine machine, long frequency) : base(machine)
+        public S32K148_FTM(IMachine machine, ulong frequency) : base(machine)
         {
             // divider : SC->PS에서 읽어와야할듯
             // compare : MOD에서 읽어와야할듯

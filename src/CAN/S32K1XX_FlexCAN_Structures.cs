@@ -333,31 +333,31 @@ namespace Antmicro.Renode.Peripherals.CAN
             }
 
 #pragma warning disable 649
-            [PacketField, Offset(doubleWords: 0, bits:  0), Width(16)] // TIMESTAMP
+            [PacketField, Offset(doubleWords: 0, bits:  0), Width(bits: 16)] // TIMESTAMP
             public ushort timestamp; // Free-Running Counter Timestamp
-            [PacketField, Offset(doubleWords: 0, bits: 16), Width( 4)] // DLC
+            [PacketField, Offset(doubleWords: 0, bits: 16), Width(bits:  4)] // DLC
             public byte dataLength; // Length of Data in Bytes
-            [PacketField, Offset(doubleWords: 0, bits: 20), Width( 1)] // RTR
+            [PacketField, Offset(doubleWords: 0, bits: 20), Width(bits:  1)] // RTR
             public bool remoteTransmissionRequest;
-            [PacketField, Offset(doubleWords: 0, bits: 21), Width( 1)] // IDE
+            [PacketField, Offset(doubleWords: 0, bits: 21), Width(bits:  1)] // IDE
             public bool idExtendedBit;
-            [PacketField, Offset(doubleWords: 0, bits: 22), Width( 1)] // SRR
+            [PacketField, Offset(doubleWords: 0, bits: 22), Width(bits:  1)] // SRR
             public bool substituteRemoteRequest;
             // bit 23 of 1st double word is reserved
-            [PacketField, Offset(doubleWords: 0, bits: 24), Width( 4)] // CODE
+            [PacketField, Offset(doubleWords: 0, bits: 24), Width(bits:  4)] // CODE
             public byte messageBufferCode;
             // bit 28 of 1st double word is reserved
-            [PacketField, Offset(doubleWords: 0, bits: 29), Width( 1)] // ESI
+            [PacketField, Offset(doubleWords: 0, bits: 29), Width(bits:  1)] // ESI
             public bool errorStateIndicator;
-            [PacketField, Offset(doubleWords: 0, bits: 30), Width( 1)] // BRS
+            [PacketField, Offset(doubleWords: 0, bits: 30), Width(bits:  1)] // BRS
             public bool bitRateSwitch;
-            [PacketField, Offset(doubleWords: 0, bits: 31), Width( 1)] // EDL
+            [PacketField, Offset(doubleWords: 0, bits: 31), Width(bits:  1)] // EDL
             public bool extendedDataLength;
-            [PacketField, Offset(doubleWords: 1, bits:  0), Width(18)] // ID (extended)
+            [PacketField, Offset(doubleWords: 1, bits:  0), Width(bits: 18)] // ID (extended)
             public uint extendedId;
-            [PacketField, Offset(doubleWords: 1, bits: 18), Width(11)] // ID (standard/extended)
+            [PacketField, Offset(doubleWords: 1, bits: 18), Width(bits: 11)] // ID (standard/extended)
             public uint standardId;
-            [PacketField, Offset(doubleWords: 1, bits: 29), Width( 3)] // PRIO
+            [PacketField, Offset(doubleWords: 1, bits: 29), Width(bits:  3)] // PRIO
             public byte localPriority;
 #pragma warning restore 649
             public byte[] data;
@@ -457,24 +457,24 @@ namespace Antmicro.Renode.Peripherals.CAN
 }}";
 
 #pragma warning disable 649
-            [PacketField, Offset(doubleWords: 0, bits:  0), Width(16)] // TIMESTAMP
+            [PacketField, Offset(doubleWords: 0, bits:  0), Width(bits: 16)] // TIMESTAMP
             public ushort timestamp; // Free-Running Counter Timestamp
-            [PacketField, Offset(doubleWords: 0, bits: 16), Width( 4)] // DLC
+            [PacketField, Offset(doubleWords: 0, bits: 16), Width(bits:  4)] // DLC
             public byte dataLength; // Length of Data in Bytes
-            [PacketField, Offset(doubleWords: 0, bits: 20), Width( 1)] // RTR
+            [PacketField, Offset(doubleWords: 0, bits: 20), Width(bits:  1)] // RTR
             public bool remoteFrame;
-            [PacketField, Offset(doubleWords: 0, bits: 21), Width( 1)] // IDE
+            [PacketField, Offset(doubleWords: 0, bits: 21), Width(bits:  1)] // IDE
             public bool extendedFrame;
-            [PacketField, Offset(doubleWords: 0, bits: 22), Width( 1)] // SRR
+            [PacketField, Offset(doubleWords: 0, bits: 22), Width(bits:  1)] // SRR
             public bool substituteRemoteRequest;
-            [PacketField, Offset(doubleWords: 0, bits: 23), Width( 9)] // IDHIT
+            [PacketField, Offset(doubleWords: 0, bits: 23), Width(bits:  9)] // IDHIT
             public ushort identifierAcceptanceFilterHitIndicator;
-            [PacketField, Offset(doubleWords: 1, bits:  0), Width(18)] // ID (extended)
+            [PacketField, Offset(doubleWords: 1, bits:  0), Width(bits: 18)] // ID (extended)
             public uint extendedId;
-            [PacketField, Offset(doubleWords: 1, bits: 18), Width(11)] // ID (standard/extended)
+            [PacketField, Offset(doubleWords: 1, bits: 18), Width(bits: 11)] // ID (standard/extended)
             public uint standardId;
             // bits 29:31 of 2nd double word are reserved
-            [PacketField, Offset(doubleWords: 2), Width(8)] // Data bytes
+            [PacketField, Offset(doubleWords: 2), Width(bits: 8)] // Data bytes
             public byte[] data;
             // double words from 4th to 23th are reserved
             // There is a table of ID filters with 128 double words elements starting at 24th
@@ -500,11 +500,11 @@ namespace Antmicro.Renode.Peripherals.CAN
             ;
 
 #pragma warning disable 649
-            [PacketField, Offset(bits:  1), Width(28)]
+            [PacketField, Offset(bits:  1), Width(bits: 28)]
             public uint rxFrameIdentifier;
-            [PacketField, Offset(bits: 30), Width( 1)]
+            [PacketField, Offset(bits: 30), Width(bits:  1)]
             public bool idExtendedBit;
-            [PacketField, Offset(bits: 31), Width( 1)]
+            [PacketField, Offset(bits: 31), Width(bits:  1)]
             public bool remoteTransmissionRequest;
 #pragma warning restore 649
         }
@@ -529,17 +529,17 @@ namespace Antmicro.Renode.Peripherals.CAN
             ;
 
 #pragma warning disable 649
-            [PacketField, Offset(bits:  0), Width(14)]
+            [PacketField, Offset(bits:  0), Width(bits: 14)]
             public uint rxFrameIdentifier1;
-            [PacketField, Offset(bits: 14), Width( 1)]
+            [PacketField, Offset(bits: 14), Width(bits:  1)]
             public bool idExtendedBit1;
-            [PacketField, Offset(bits: 15), Width( 1)]
+            [PacketField, Offset(bits: 15), Width(bits:  1)]
             public bool remoteTransmissionRequest1;
-            [PacketField, Offset(bits: 16), Width(14)]
+            [PacketField, Offset(bits: 16), Width(bits: 14)]
             public uint rxFrameIdentifier0;
-            [PacketField, Offset(bits: 30), Width( 1)]
+            [PacketField, Offset(bits: 30), Width(bits:  1)]
             public bool idExtendedBit0;
-            [PacketField, Offset(bits: 31), Width( 1)]
+            [PacketField, Offset(bits: 31), Width(bits:  1)]
             public bool remoteTransmissionRequest0;
 #pragma warning restore 649
         }
@@ -562,13 +562,13 @@ namespace Antmicro.Renode.Peripherals.CAN
             ;
 
 #pragma warning disable 649
-            [PacketField, Offset(bits:  0), Width(8)]
+            [PacketField, Offset(bits:  0), Width(bits: 8)]
             public uint rxFrameIdentifier3;
-            [PacketField, Offset(bits:  8), Width(8)]
+            [PacketField, Offset(bits:  8), Width(bits: 8)]
             public uint rxFrameIdentifier2;
-            [PacketField, Offset(bits: 16), Width(8)]
+            [PacketField, Offset(bits: 16), Width(bits: 8)]
             public uint rxFrameIdentifier1;
-            [PacketField, Offset(bits: 24), Width(8)]
+            [PacketField, Offset(bits: 24), Width(bits: 8)]
             public uint rxFrameIdentifier0;
 #pragma warning restore 649
         }
